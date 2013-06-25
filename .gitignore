@@ -1,0 +1,5 @@
+*~
+obj
+*.framework
+*.pbxuser
+xcuserdata

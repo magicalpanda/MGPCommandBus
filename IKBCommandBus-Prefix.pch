@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'IKBCommandBus' target in the 'IKBCommandBus' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

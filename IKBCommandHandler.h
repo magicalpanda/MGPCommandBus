@@ -22,9 +22,23 @@
 
 @protocol IKBCommand;
 
+/**
+ * A command handler represents the work that is scheduled by the bus upon
+ * reception of a command.
+ */
 @interface IKBCommandHandler : NSObject
 
+/**
+ * Inspect the command and report whether this handler class can execute
+ * the work needed to fulfil the command.
+ */
 + (BOOL)canHandleCommand: (id <IKBCommand>)command;
+
+/**
+ * Perform this work to satisfy the requested command.
+ * @note This method will be executed in a context private to the command bus,
+ *       don't make any assumptions about the thread or queue it's running in.
+ */
 - (void)executeCommand: (id <IKBCommand>)command;
 
 @end

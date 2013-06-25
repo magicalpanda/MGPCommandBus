@@ -22,10 +22,30 @@
 #import "IKBCommand.h"
 #import "IKBCommandHandler.h"
 
+/**
+ * The command bus accepts commands from the application and schedules work
+ * to fulfil those commands.
+ */
 @interface IKBCommandBus : NSObject
 
+/**
+ * A convenience method to get a shared bus everywhere in your app. While
+ * IKBCommandBus is not a singleton, you need to register handlers and
+ * submit commands to the same bus which can be arranged via this method.
+ */
 + (instancetype)applicationCommandBus;
+
+/**
+ * Request a command be performed. The command should conform to IKBCommand,
+ * and additionally specify any additional data needed. As an example, a
+ * contacts app might have an "add person" command which carries a name,
+ * phone number, email address and so on.
+ */
 - (void)execute: (id <IKBCommand>)command;
+
+/**
+ * Add a handler class to the command bus.
+ */
 - (void)registerCommandHandler: (Class)handlerClass;
 
 @end

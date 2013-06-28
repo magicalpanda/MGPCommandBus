@@ -1,4 +1,5 @@
 *~
+derived_src
 obj
 *.framework
 *.pbxuser

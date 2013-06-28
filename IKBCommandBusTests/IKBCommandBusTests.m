@@ -30,6 +30,10 @@
 
 @end
 
+@interface BoringCommandHandler : NSObject <IKBCommandHandler>
+
+@end
+
 @interface TestOperationCounter : NSObject
 
 @property (nonatomic, assign) int preExecuteCount;
@@ -95,6 +99,13 @@
   STAssertEquals(_counter.operationCountDelta, 2, @"Two handlers should each get scheduled");
 }
 
+- (void)testTheBusDoesNotScheduleAnUninterestedHandler
+{
+  [_perTestBus registerCommandHandler: [BoringCommandHandler new]];
+  [_counter execute: _testCommand onBus: _perTestBus];
+  STAssertEquals(_counter.operationCountDelta, 0, @"Uninterested handler should not get scheduled");
+}
+
 @end
 
 @implementation TestCommand
@@ -105,6 +116,11 @@
 
 @implementation TestCommandHandler
 - (BOOL)canHandleCommand:(id<IKBCommand>)command { return YES; }
+- (void)executeCommand:(id<IKBCommand>)command {  }
+@end
+
+@implementation BoringCommandHandler
+- (BOOL)canHandleCommand:(id<IKBCommand>)command { return NO; }
 - (void)executeCommand:(id<IKBCommand>)command {  }
 @end
 

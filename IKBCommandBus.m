@@ -55,21 +55,21 @@ static IKBCommandBus *_defaultBus;
   return self;
 }
 
-- (void)registerCommandHandler: (Class)handlerClass
+- (void)registerCommandHandler: (id <IKBCommandHandler>)handler
 {
-  _handlers = [[[_handlers autorelease] setByAddingObject: handlerClass] retain];
+  _handlers = [[[_handlers autorelease] setByAddingObject: handler] retain];
 }
 
 - (void)execute: (id <IKBCommand>)command
 {
   id <IKBCommandHandler> handler = nil;
-  for (Class handlerClass in _handlers)
+  for (id <IKBCommandHandler> thisHandler in _handlers)
     {
-      if ([handlerClass canHandleCommand: command])
-	{
-	  handler = [handlerClass new];
-	  break;
-	}
+      if ([[thisHandler class] canHandleCommand: command])
+        {
+          handler = thisHandler;
+          break;
+        }
     }
   NSAssert(handler != nil, @"No handler defined for command %@", command);
   NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget: handler selector: @selector(executeCommand:) object: command];

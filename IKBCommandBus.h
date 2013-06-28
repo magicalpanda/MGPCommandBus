@@ -44,8 +44,8 @@
 - (void)execute: (id <IKBCommand>)command;
 
 /**
- * Add a handler class to the command bus.
+ * Add a handler object to the command bus.
  */
-- (void)registerCommandHandler: (Class)handlerClass;
+- (void)registerCommandHandler: (id <IKBCommandHandler>)handler;
 
 @end

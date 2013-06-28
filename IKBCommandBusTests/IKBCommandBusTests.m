@@ -68,7 +68,7 @@
 - (void)testExecutingACommandWithAHandlerAddsAnOperationToTheQueue
 {
     int preExecuteCount, postExecuteCount;
-    [_perTestBus registerCommandHandler: [TestCommandHandler class]];
+    [_perTestBus registerCommandHandler: [TestCommandHandler new]];
     preExecuteCount = [[_perTestBus queue] operationCount];
     STAssertNoThrow([_perTestBus execute: _testCommand], @"Can execute a command when it's handled");
     postExecuteCount = [[_perTestBus queue] operationCount];

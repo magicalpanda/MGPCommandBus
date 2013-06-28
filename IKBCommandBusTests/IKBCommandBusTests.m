@@ -84,6 +84,6 @@
 @end
 
 @implementation TestCommandHandler
-+ (BOOL)canHandleCommand:(id<IKBCommand>)command { return YES; }
-- (void)executeCommand:(id<IKBCommand>)command {}
+- (BOOL)canHandleCommand:(id<IKBCommand>)command { return YES; }
+- (void)executeCommand:(id<IKBCommand>)command {  }
 @end

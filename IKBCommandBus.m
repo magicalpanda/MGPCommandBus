@@ -65,7 +65,7 @@ static IKBCommandBus *_defaultBus;
   id <IKBCommandHandler> handler = nil;
   for (id <IKBCommandHandler> thisHandler in _handlers)
     {
-      if ([[thisHandler class] canHandleCommand: command])
+      if ([thisHandler canHandleCommand: command])
         {
           handler = thisHandler;
           break;

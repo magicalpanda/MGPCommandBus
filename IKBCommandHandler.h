@@ -32,7 +32,7 @@
  * Inspect the command and report whether this handler class can execute
  * the work needed to fulfil the command.
  */
-+ (BOOL)canHandleCommand: (id <IKBCommand>)command;
+- (BOOL)canHandleCommand: (id <IKBCommand>)command;
 
 /**
  * Perform this work to satisfy the requested command.

@@ -3,7 +3,7 @@ include $(GNUSTEP_MAKEFILES)/common.make
 NATIVE_LIBRARY_NAME= IKBCommandBus
 IKBCommandBus_NEEDS_GUI= no
 
-IKBCommandBus_OBJC_FILES= IKBCommandBus.m IKBCommandHandler.m
+IKBCommandBus_OBJC_FILES= IKBCommandBus.m
 IKBCommandBus_HEADER_FILES_DIR= .
 IKBCommandBus_HEADER_FILES= IKBCommand.h IKBCommandBus.h IKBCommandHandler.h
 

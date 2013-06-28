@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		742C252A1779C8D500FA20DF /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C25281779C8D500FA20DF /* IKBCommandBus.m */; };
-		742C252B1779C8D500FA20DF /* IKBCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C25291779C8D500FA20DF /* IKBCommandHandler.m */; };
 		742C252F1779C91700FA20DF /* IKBCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 742C252C1779C91700FA20DF /* IKBCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		742C25301779C91700FA20DF /* IKBCommandBus.h in Headers */ = {isa = PBXBuildFile; fileRef = 742C252D1779C91700FA20DF /* IKBCommandBus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		742C25311779C91700FA20DF /* IKBCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 742C252E1779C91700FA20DF /* IKBCommandHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		742C25281779C8D500FA20DF /* IKBCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKBCommandBus.m; sourceTree = SOURCE_ROOT; };
-		742C25291779C8D500FA20DF /* IKBCommandHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKBCommandHandler.m; sourceTree = SOURCE_ROOT; };
 		742C252C1779C91700FA20DF /* IKBCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommand.h; sourceTree = SOURCE_ROOT; };
 		742C252D1779C91700FA20DF /* IKBCommandBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommandBus.h; sourceTree = SOURCE_ROOT; };
 		742C252E1779C91700FA20DF /* IKBCommandHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommandHandler.h; sourceTree = SOURCE_ROOT; };
@@ -119,7 +117,6 @@
 				742C252D1779C91700FA20DF /* IKBCommandBus.h */,
 				742C252E1779C91700FA20DF /* IKBCommandHandler.h */,
 				742C25281779C8D500FA20DF /* IKBCommandBus.m */,
-				742C25291779C8D500FA20DF /* IKBCommandHandler.m */,
 				742C25361779CBB300FA20DF /* IKBCommandBus+Extension.h */,
 				744662CF1779C868001980E7 /* Supporting Files */,
 			);
@@ -319,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				742C252A1779C8D500FA20DF /* IKBCommandBus.m in Sources */,
-				742C252B1779C8D500FA20DF /* IKBCommandHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

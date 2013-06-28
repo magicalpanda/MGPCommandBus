@@ -62,7 +62,7 @@ static IKBCommandBus *_defaultBus;
 
 - (void)execute: (id <IKBCommand>)command
 {
-  IKBCommandHandler *handler = nil;
+  id <IKBCommandHandler> handler = nil;
   for (Class handlerClass in _handlers)
     {
       if ([handlerClass canHandleCommand: command])

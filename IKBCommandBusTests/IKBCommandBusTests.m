@@ -26,7 +26,7 @@
 
 @end
 
-@interface TestCommandHandler : IKBCommandHandler
+@interface TestCommandHandler : NSObject <IKBCommandHandler>
 
 @end
 

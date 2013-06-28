@@ -26,7 +26,7 @@
  * A command handler represents the work that is scheduled by the bus upon
  * reception of a command.
  */
-@interface IKBCommandHandler : NSObject
+@protocol IKBCommandHandler <NSObject>
 
 /**
  * Inspect the command and report whether this handler class can execute

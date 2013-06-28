@@ -30,29 +30,41 @@
 
 @end
 
+@interface TestOperationCounter : NSObject
+
+@property (nonatomic, assign) int preExecuteCount;
+@property (nonatomic, assign) int postExecuteCount;
+@property (nonatomic, readonly) int operationCountDelta;
+- (void)execute: (id <IKBCommand>)command onBus: (IKBCommandBus *)bus;
+
+@end
+
 @implementation IKBCommandBusTests
 {
-    IKBCommandBus *_defaultBus;
-    IKBCommandBus *_perTestBus;
-    TestCommand *_testCommand;
+  IKBCommandBus *_defaultBus;
+  IKBCommandBus *_perTestBus;
+  TestCommand *_testCommand;
+  TestOperationCounter *_counter;
 }
 
 - (void)setUp
 {
-    [super setUp];
-    _defaultBus = [IKBCommandBus applicationCommandBus];
-    _perTestBus = [IKBCommandBus new];
-    [[_perTestBus queue] setSuspended: YES];
-    _testCommand = [TestCommand new];
+  [super setUp];
+  _defaultBus = [IKBCommandBus applicationCommandBus];
+  _perTestBus = [IKBCommandBus new];
+  [[_perTestBus queue] setSuspended: YES];
+  _testCommand = [TestCommand new];
+  _counter = [TestOperationCounter new];
 }
 
 - (void)tearDown
 {
-    _defaultBus = nil;
-    [[_perTestBus queue] cancelAllOperations];
-    _perTestBus = nil;
-    _testCommand = nil;
-    [super tearDown];
+  _counter = nil;
+  _defaultBus = nil;
+  [[_perTestBus queue] cancelAllOperations];
+  _perTestBus = nil;
+  _testCommand = nil;
+  [super tearDown];
 }
 
 - (void)testDefaultBusIsNotNil
@@ -62,21 +74,15 @@
 
 - (void)testExecutingACommandWithoutAHandlerDoesNotScheduleAnyWork
 {
-    int preExecuteCount, postExecuteCount;
-    preExecuteCount = [[_perTestBus queue] operationCount];
-    STAssertNoThrow([_perTestBus execute: _testCommand], @"Shouldn't execute a command I don't have a handler for");
-    postExecuteCount = [[_perTestBus queue] operationCount];
-    STAssertEquals(preExecuteCount, postExecuteCount, @"No operations were added to the handler's queue");
+  STAssertNoThrow([_counter execute: _testCommand onBus: _perTestBus], @"Shouldn't execute a command I don't have a handler for");
+  STAssertEquals(_counter.operationCountDelta, 0, @"No operations were added to the handler's queue");
 }
 
 - (void)testExecutingACommandWithAHandlerAddsAnOperationToTheQueue
 {
-    int preExecuteCount, postExecuteCount;
-    [_perTestBus registerCommandHandler: [TestCommandHandler new]];
-    preExecuteCount = [[_perTestBus queue] operationCount];
-    STAssertNoThrow([_perTestBus execute: _testCommand], @"Can execute a command when it's handled");
-    postExecuteCount = [[_perTestBus queue] operationCount];
-    STAssertEquals(postExecuteCount - preExecuteCount, 1, @"An execute operation was added to the queue");
+  [_perTestBus registerCommandHandler: [TestCommandHandler new]];
+  STAssertNoThrow([_counter execute: _testCommand onBus: _perTestBus], @"Can execute a command when it's handled");
+  STAssertEquals(_counter.operationCountDelta, 1, @"An execute operation was added to the queue");
 }
 
 @end
@@ -90,4 +96,17 @@
 @implementation TestCommandHandler
 - (BOOL)canHandleCommand:(id<IKBCommand>)command { return YES; }
 - (void)executeCommand:(id<IKBCommand>)command {  }
+@end
+
+@implementation TestOperationCounter
+
+- (void)execute:(id<IKBCommand>)command onBus:(IKBCommandBus *)bus
+{
+  self.preExecuteCount = [[bus queue] operationCount];
+  [bus execute: command];
+  self.postExecuteCount = [[bus queue] operationCount];
+}
+
+- (int)operationCountDelta { return self.postExecuteCount - self.preExecuteCount; }
+
 @end

@@ -68,23 +68,19 @@ static IKBCommandBus *_defaultBus;
 
 - (void)execute: (id <IKBCommand>)command
 {
-  id <IKBCommandHandler> handler = nil;
-  for (id <IKBCommandHandler> thisHandler in _handlers)
-    {
-      if ([thisHandler canHandleCommand: command])
-        {
-          handler = thisHandler;
-          break;
-        }
-    }
-  if (handler == nil)
+  NSSet *matchingHandlers = [_handlers objectsPassingTest: ^(id <IKBCommandHandler> thisHandler, BOOL *stop){
+    return [thisHandler canHandleCommand: command];
+  }];
+  if ([matchingHandlers count] == 0)
     {
       IKBCommandBusZeroHandlers(command);
     }
-  NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget: handler selector: @selector(executeCommand:) object: command];
-  [_queue addOperation: executeOperation];
-  [executeOperation release];
-  [handler release];
+  for (id <IKBCommandHandler> thisHandler in matchingHandlers)
+  {
+    NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget: thisHandler selector: @selector(executeCommand:) object: command];
+    [_queue addOperation: executeOperation];
+    [executeOperation release];
+  }
 }
 
 - (void)dealloc

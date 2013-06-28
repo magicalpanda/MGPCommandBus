@@ -85,6 +85,16 @@
   STAssertEquals(_counter.operationCountDelta, 1, @"An execute operation was added to the queue");
 }
 
+- (void)testMultipleHandlersForTheSameCommandAllGetScheduled
+{
+  for (int i = 0; i++ < 2;)
+    {
+      [_perTestBus registerCommandHandler: [TestCommandHandler new]];
+    }
+  [_counter execute: _testCommand onBus: _perTestBus];
+  STAssertEquals(_counter.operationCountDelta, 2, @"Two handlers should each get scheduled");
+}
+
 @end
 
 @implementation TestCommand

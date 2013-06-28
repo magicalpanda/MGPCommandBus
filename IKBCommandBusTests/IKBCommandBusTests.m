@@ -60,9 +60,13 @@
     STAssertNotNil(_defaultBus, @"Application can get access to the command bus");
 }
 
-- (void)testExecutingACommandWithoutAHandlerThrows
+- (void)testExecutingACommandWithoutAHandlerDoesNotScheduleAnyWork
 {
-    STAssertThrows([_perTestBus execute: _testCommand], @"Shouldn't execute a command I don't have a handler for");
+    int preExecuteCount, postExecuteCount;
+    preExecuteCount = [[_perTestBus queue] operationCount];
+    STAssertNoThrow([_perTestBus execute: _testCommand], @"Shouldn't execute a command I don't have a handler for");
+    postExecuteCount = [[_perTestBus queue] operationCount];
+    STAssertEquals(preExecuteCount, postExecuteCount, @"No operations were added to the handler's queue");
 }
 
 - (void)testExecutingACommandWithAHandlerAddsAnOperationToTheQueue

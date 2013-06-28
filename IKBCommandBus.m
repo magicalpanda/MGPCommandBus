@@ -23,6 +23,12 @@
 #import "IKBCommand.h"
 #import "IKBCommandHandler.h"
 
+void IKBCommandBusZeroHandlers(id <IKBCommand> command)
+{
+  NSLog(@"No handlers registered for command %@", command);
+  NSLog(@"Break in IKBCommandBusZeroHandlers() to debug.");
+}
+
 @implementation IKBCommandBus
 {
   NSOperationQueue *_queue;
@@ -71,7 +77,10 @@ static IKBCommandBus *_defaultBus;
           break;
         }
     }
-  NSAssert(handler != nil, @"No handler defined for command %@", command);
+  if (handler == nil)
+    {
+      IKBCommandBusZeroHandlers(command);
+    }
   NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget: handler selector: @selector(executeCommand:) object: command];
   [_queue addOperation: executeOperation];
   [executeOperation release];

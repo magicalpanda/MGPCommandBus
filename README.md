@@ -8,7 +8,7 @@ Commands describe requests from your application for work to be done, and should
 
     [[IKBCommandBus applicationCommandBus] execute: command];
 
-The bus looks for an appropriate `IKBCommandHandler` subclass to schedule in response to a command: command handlers define the work that is done when a given command is requested. Register handler classes with `+[IKBCommandBus registerHandlerClass:]`; the bus assumes that there will be one handler for every command it receives.
+The bus looks for an appropriate `IKBCommandHandler` conformer to schedule in response to a command: command handlers define the work that is done when a given command is requested. Register handler instance with `-[IKBCommandBus registerHandler:]`. Any number of handlers can support a single command, they will all get a chance to handle it.
 
 See [Separating User Interface From Work](http://blog.securemacprogramming.com/2013/06/separating-user-interface-from-work/) for more discussion of the pattern.
 

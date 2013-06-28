@@ -30,6 +30,9 @@
  */
 @protocol IKBCommand <NSObject, NSCoding>
 
+/**
+ * This property is currently unused.
+ */
 @property (nonatomic, readonly) NSUUID *identifier;
 
 @end

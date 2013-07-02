@@ -25,69 +25,70 @@
 
 void IKBCommandBusZeroHandlers(id <IKBCommand> command)
 {
-  NSLog(@"No handlers registered for command %@", command);
-  NSLog(@"Break in IKBCommandBusZeroHandlers() to debug.");
+    NSLog(@"No handlers registered for command %@", command);
+    NSLog(@"Break in IKBCommandBusZeroHandlers() to debug.");
 }
 
 @implementation IKBCommandBus
 {
-  NSOperationQueue *_queue;
-  NSSet *_handlers;
+    NSOperationQueue *_queue;
+    NSSet *_handlers;
 }
 
 static IKBCommandBus *_defaultBus;
 
 + (void)initialize
 {
-  if (self == [IKBCommandBus class])
+    if (self == [IKBCommandBus class])
     {
-      _defaultBus = [self new];
+        _defaultBus = [self new];
     }
 }
 
 + (instancetype)applicationCommandBus
 {
-  return _defaultBus;
+    return _defaultBus;
 }
 
 - (id)init
 {
-  self = [super init];
-  if (self)
+    self = [super init];
+    if (self)
     {
-      _queue = [NSOperationQueue new];
-      _handlers = [[NSSet set] retain];
+        _queue = [NSOperationQueue new];
+        _handlers = [[NSSet set] retain];
     }
-  return self;
+    return self;
 }
 
 - (void)registerCommandHandler: (id <IKBCommandHandler>)handler
 {
-  _handlers = [[[_handlers autorelease] setByAddingObject: handler] retain];
+    NSParameterAssert(handler);
+    _handlers = [[[_handlers autorelease] setByAddingObject: handler] retain];
 }
 
 - (void)execute: (id <IKBCommand>)command
 {
-  NSSet *matchingHandlers = [_handlers objectsPassingTest: ^(id <IKBCommandHandler> thisHandler, BOOL *stop){
-    return [thisHandler canHandleCommand: command];
-  }];
-  if ([matchingHandlers count] == 0)
+    NSSet *matchingHandlers = [_handlers objectsPassingTest: ^(id <IKBCommandHandler> thisHandler, BOOL *stop){
+        return [thisHandler canHandleCommand: command];
+    }];
+    if ([matchingHandlers count] == 0)
     {
-      IKBCommandBusZeroHandlers(command);
+        IKBCommandBusZeroHandlers(command);
     }
-  for (id <IKBCommandHandler> thisHandler in matchingHandlers)
-  {
-    NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget: thisHandler selector: @selector(executeCommand:) object: command];
-    [_queue addOperation: executeOperation];
-    [executeOperation release];
-  }
+    for (id <IKBCommandHandler> thisHandler in matchingHandlers)
+    {
+        NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget: thisHandler selector: @selector(executeCommand:) object: command];
+        [_queue addOperation: executeOperation];
+        [executeOperation release];
+    }
 }
 
 - (void)dealloc
 {
-  [_queue release];
-  [_handlers release];
-  [super dealloc];
+    [_queue release];
+    [_handlers release];
+    [super dealloc];
 }
 
 - (NSOperationQueue *)queue

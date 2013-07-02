@@ -19,6 +19,8 @@
 		744662E41779C868001980E7 /* IKBCommandBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662C91779C868001980E7 /* IKBCommandBus.framework */; };
 		744662EA1779C868001980E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 744662E81779C868001980E7 /* InfoPlist.strings */; };
 		744662ED1779C868001980E7 /* IKBCommandBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 744662EC1779C868001980E7 /* IKBCommandBusTests.m */; };
+		C76662A7177E2517009151FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662CC1779C868001980E7 /* Foundation.framework */; };
+		C76662C9177E2532009151FA /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C25281779C8D500FA20DF /* IKBCommandBus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C76662A4177E2517009151FA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		742C25281779C8D500FA20DF /* IKBCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKBCommandBus.m; sourceTree = SOURCE_ROOT; };
 		742C252C1779C91700FA20DF /* IKBCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommand.h; sourceTree = SOURCE_ROOT; };
@@ -56,6 +70,8 @@
 		744662E91779C868001980E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		744662EB1779C868001980E7 /* IKBCommandBusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKBCommandBusTests.h; sourceTree = "<group>"; };
 		744662EC1779C868001980E7 /* IKBCommandBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKBCommandBusTests.m; sourceTree = "<group>"; };
+		C76662A6177E2517009151FA /* libIKBCommandBus-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libIKBCommandBus-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C76662B4177E2517009151FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C76662A3177E2517009151FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76662A7177E2517009151FA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +120,7 @@
 			children = (
 				744662C91779C868001980E7 /* IKBCommandBus.framework */,
 				744662DA1779C868001980E7 /* IKBCommandBusTests.octest */,
+				C76662A6177E2517009151FA /* libIKBCommandBus-iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +131,7 @@
 				744662CC1779C868001980E7 /* Foundation.framework */,
 				744662DB1779C868001980E7 /* SenTestingKit.framework */,
 				744662DD1779C868001980E7 /* UIKit.framework */,
+				C76662B4177E2517009151FA /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,6 +235,23 @@
 			productReference = 744662DA1779C868001980E7 /* IKBCommandBusTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		C76662A5177E2517009151FA /* IKBCommandBus-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C76662C7177E2517009151FA /* Build configuration list for PBXNativeTarget "IKBCommandBus-iOS" */;
+			buildPhases = (
+				C76662A2177E2517009151FA /* Sources */,
+				C76662A3177E2517009151FA /* Frameworks */,
+				C76662A4177E2517009151FA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "IKBCommandBus-iOS";
+			productName = "IKBCommandBus-iOS";
+			productReference = C76662A6177E2517009151FA /* libIKBCommandBus-iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -232,6 +275,7 @@
 			targets = (
 				744662C81779C868001980E7 /* IKBCommandBus */,
 				744662D91779C868001980E7 /* IKBCommandBusTests */,
+				C76662A5177E2517009151FA /* IKBCommandBus-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -324,6 +368,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				744662ED1779C868001980E7 /* IKBCommandBusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C76662A2177E2517009151FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C76662C9177E2532009151FA /* IKBCommandBus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +537,50 @@
 			};
 			name = Release;
 		};
+		C76662C3177E2517009151FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DSTROOT = /tmp/IKBCommandBus_iOS.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKBCommandBus-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C76662C4177E2517009151FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				DSTROOT = /tmp/IKBCommandBus_iOS.dst;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKBCommandBus-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -514,6 +610,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C76662C7177E2517009151FA /* Build configuration list for PBXNativeTarget "IKBCommandBus-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C76662C3177E2517009151FA /* Debug */,
+				C76662C4177E2517009151FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

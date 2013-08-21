@@ -7,20 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		742C252A1779C8D500FA20DF /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C25281779C8D500FA20DF /* IKBCommandBus.m */; };
-		742C252F1779C91700FA20DF /* IKBCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = 742C252C1779C91700FA20DF /* IKBCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		742C25301779C91700FA20DF /* IKBCommandBus.h in Headers */ = {isa = PBXBuildFile; fileRef = 742C252D1779C91700FA20DF /* IKBCommandBus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		742C25311779C91700FA20DF /* IKBCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 742C252E1779C91700FA20DF /* IKBCommandHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		742C25351779C99900FA20DF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 742C25331779C99900FA20DF /* InfoPlist.strings */; };
 		744662CD1779C868001980E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662CC1779C868001980E7 /* Foundation.framework */; };
 		744662DC1779C868001980E7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662DB1779C868001980E7 /* SenTestingKit.framework */; };
 		744662DE1779C868001980E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662DD1779C868001980E7 /* UIKit.framework */; };
 		744662DF1779C868001980E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662CC1779C868001980E7 /* Foundation.framework */; };
 		744662E41779C868001980E7 /* IKBCommandBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662C91779C868001980E7 /* IKBCommandBus.framework */; };
-		744662EA1779C868001980E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 744662E81779C868001980E7 /* InfoPlist.strings */; };
-		744662ED1779C868001980E7 /* IKBCommandBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 744662EC1779C868001980E7 /* IKBCommandBusTests.m */; };
-		C76662A7177E2517009151FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662CC1779C868001980E7 /* Foundation.framework */; };
-		C76662C9177E2532009151FA /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 742C25281779C8D500FA20DF /* IKBCommandBus.m */; };
+		C7220F2117C562B60091BE91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662CC1779C868001980E7 /* Foundation.framework */; };
+		C7220F2F17C562B60091BE91 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7220F2E17C562B60091BE91 /* XCTest.framework */; };
+		C7220F3017C562B60091BE91 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662CC1779C868001980E7 /* Foundation.framework */; };
+		C7220F3117C562B60091BE91 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744662DD1779C868001980E7 /* UIKit.framework */; };
+		C7220F3417C562B60091BE91 /* libIKBCommandBus-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7220F2017C562B60091BE91 /* libIKBCommandBus-iOS.a */; };
+		C7220F5817C566C50091BE91 /* IKBCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C7220F4E17C566C50091BE91 /* IKBCommand.h */; };
+		C7220F5917C566C50091BE91 /* IKBCommandBus+Extension.h in Headers */ = {isa = PBXBuildFile; fileRef = C7220F4F17C566C50091BE91 /* IKBCommandBus+Extension.h */; };
+		C7220F5A17C566C50091BE91 /* IKBCommandBus.h in Headers */ = {isa = PBXBuildFile; fileRef = C7220F5017C566C50091BE91 /* IKBCommandBus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7220F5B17C566C50091BE91 /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C7220F5117C566C50091BE91 /* IKBCommandBus.m */; };
+		C7220F5C17C566C50091BE91 /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C7220F5117C566C50091BE91 /* IKBCommandBus.m */; };
+		C7220F5D17C566C50091BE91 /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C7220F5117C566C50091BE91 /* IKBCommandBus.m */; };
+		C7220F5E17C566C50091BE91 /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C7220F5117C566C50091BE91 /* IKBCommandBus.m */; };
+		C7220F5F17C566C50091BE91 /* IKBCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C7220F5217C566C50091BE91 /* IKBCommandHandler.h */; };
+		C7220F6017C566C50091BE91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7220F5417C566C50091BE91 /* InfoPlist.strings */; };
+		C7220F6117C566C50091BE91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7220F5417C566C50091BE91 /* InfoPlist.strings */; };
+		C7220F6217C566C50091BE91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7220F5417C566C50091BE91 /* InfoPlist.strings */; };
+		C7220F6717C566D10091BE91 /* IKBCommandBus-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7220F5617C566C50091BE91 /* IKBCommandBus-Info.plist */; };
+		C7220F6F17C567400091BE91 /* IKBCommandBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7220F6A17C567400091BE91 /* IKBCommandBusTests.m */; };
+		C7220F7017C567400091BE91 /* IKBCommandBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C7220F6A17C567400091BE91 /* IKBCommandBusTests.m */; };
+		C7220F7117C567400091BE91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7220F6C17C567400091BE91 /* InfoPlist.strings */; };
+		C7220F7217C567400091BE91 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C7220F6C17C567400091BE91 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +50,17 @@
 			remoteGlobalIDString = 744662C81779C868001980E7;
 			remoteInfo = IKBCommandBus;
 		};
+		C7220F3217C562B60091BE91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 744662BD1779C868001980E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7220F1F17C562B60091BE91;
+			remoteInfo = "IKBCommandBus-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		C76662A4177E2517009151FA /* CopyFiles */ = {
+		C7220F1E17C562B60091BE91 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
@@ -53,25 +72,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		742C25281779C8D500FA20DF /* IKBCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKBCommandBus.m; sourceTree = SOURCE_ROOT; };
-		742C252C1779C91700FA20DF /* IKBCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommand.h; sourceTree = SOURCE_ROOT; };
-		742C252D1779C91700FA20DF /* IKBCommandBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommandBus.h; sourceTree = SOURCE_ROOT; };
-		742C252E1779C91700FA20DF /* IKBCommandHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommandHandler.h; sourceTree = SOURCE_ROOT; };
-		742C25341779C99900FA20DF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		742C25361779CBB300FA20DF /* IKBCommandBus+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IKBCommandBus+Extension.h"; sourceTree = SOURCE_ROOT; };
 		744662C91779C868001980E7 /* IKBCommandBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = IKBCommandBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		744662CC1779C868001980E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		744662D01779C868001980E7 /* IKBCommandBus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKBCommandBus-Info.plist"; sourceTree = "<group>"; };
-		744662D41779C868001980E7 /* IKBCommandBus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IKBCommandBus-Prefix.pch"; sourceTree = "<group>"; };
 		744662DA1779C868001980E7 /* IKBCommandBusTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKBCommandBusTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		744662DB1779C868001980E7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		744662DD1779C868001980E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		744662E71779C868001980E7 /* IKBCommandBusTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKBCommandBusTests-Info.plist"; sourceTree = "<group>"; };
-		744662E91779C868001980E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		744662EB1779C868001980E7 /* IKBCommandBusTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKBCommandBusTests.h; sourceTree = "<group>"; };
-		744662EC1779C868001980E7 /* IKBCommandBusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKBCommandBusTests.m; sourceTree = "<group>"; };
-		C76662A6177E2517009151FA /* libIKBCommandBus-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libIKBCommandBus-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C76662B4177E2517009151FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C7220F2017C562B60091BE91 /* libIKBCommandBus-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libIKBCommandBus-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7220F2D17C562B60091BE91 /* IKBCommandBus-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IKBCommandBus-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7220F2E17C562B60091BE91 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C7220F4E17C566C50091BE91 /* IKBCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommand.h; sourceTree = "<group>"; };
+		C7220F4F17C566C50091BE91 /* IKBCommandBus+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IKBCommandBus+Extension.h"; sourceTree = "<group>"; };
+		C7220F5017C566C50091BE91 /* IKBCommandBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommandBus.h; sourceTree = "<group>"; };
+		C7220F5117C566C50091BE91 /* IKBCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKBCommandBus.m; sourceTree = "<group>"; };
+		C7220F5217C566C50091BE91 /* IKBCommandHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommandHandler.h; sourceTree = "<group>"; };
+		C7220F5517C566C50091BE91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7220F5617C566C50091BE91 /* IKBCommandBus-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "IKBCommandBus-Info.plist"; sourceTree = "<group>"; };
+		C7220F5717C566C50091BE91 /* IKBCommandBus-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IKBCommandBus-Prefix.pch"; sourceTree = "<group>"; };
+		C7220F6917C567400091BE91 /* IKBCommandBusTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKBCommandBusTests.h; sourceTree = "<group>"; };
+		C7220F6A17C567400091BE91 /* IKBCommandBusTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKBCommandBusTests.m; sourceTree = "<group>"; };
+		C7220F6D17C567400091BE91 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C7220F6E17C567400091BE91 /* IKBCommandBusTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "IKBCommandBusTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,11 +114,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C76662A3177E2517009151FA /* Frameworks */ = {
+		C7220F1D17C562B60091BE91 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76662A7177E2517009151FA /* Foundation.framework in Frameworks */,
+				C7220F2117C562B60091BE91 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7220F2A17C562B60091BE91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7220F2F17C562B60091BE91 /* XCTest.framework in Frameworks */,
+				C7220F3117C562B60091BE91 /* UIKit.framework in Frameworks */,
+				C7220F3017C562B60091BE91 /* Foundation.framework in Frameworks */,
+				C7220F3417C562B60091BE91 /* libIKBCommandBus-iOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +139,8 @@
 		744662BC1779C868001980E7 = {
 			isa = PBXGroup;
 			children = (
-				744662CE1779C868001980E7 /* IKBCommandBus */,
-				744662E51779C868001980E7 /* IKBCommandBusTests */,
+				C7220F4D17C566C50091BE91 /* Library */,
+				C7220F6817C567400091BE91 /* Tests */,
 				744662CB1779C868001980E7 /* Frameworks */,
 				744662CA1779C868001980E7 /* Products */,
 			);
@@ -120,7 +151,8 @@
 			children = (
 				744662C91779C868001980E7 /* IKBCommandBus.framework */,
 				744662DA1779C868001980E7 /* IKBCommandBusTests.octest */,
-				C76662A6177E2517009151FA /* libIKBCommandBus-iOS.a */,
+				C7220F2017C562B60091BE91 /* libIKBCommandBus-iOS.a */,
+				C7220F2D17C562B60091BE91 /* IKBCommandBus-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,51 +163,51 @@
 				744662CC1779C868001980E7 /* Foundation.framework */,
 				744662DB1779C868001980E7 /* SenTestingKit.framework */,
 				744662DD1779C868001980E7 /* UIKit.framework */,
-				C76662B4177E2517009151FA /* XCTest.framework */,
+				C7220F2E17C562B60091BE91 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		744662CE1779C868001980E7 /* IKBCommandBus */ = {
+		C7220F4D17C566C50091BE91 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				742C252C1779C91700FA20DF /* IKBCommand.h */,
-				742C252D1779C91700FA20DF /* IKBCommandBus.h */,
-				742C252E1779C91700FA20DF /* IKBCommandHandler.h */,
-				742C25281779C8D500FA20DF /* IKBCommandBus.m */,
-				742C25361779CBB300FA20DF /* IKBCommandBus+Extension.h */,
-				744662CF1779C868001980E7 /* Supporting Files */,
+				C7220F4E17C566C50091BE91 /* IKBCommand.h */,
+				C7220F4F17C566C50091BE91 /* IKBCommandBus+Extension.h */,
+				C7220F5017C566C50091BE91 /* IKBCommandBus.h */,
+				C7220F5117C566C50091BE91 /* IKBCommandBus.m */,
+				C7220F5217C566C50091BE91 /* IKBCommandHandler.h */,
+				C7220F5317C566C50091BE91 /* Support */,
 			);
-			path = IKBCommandBus;
+			path = Library;
 			sourceTree = "<group>";
 		};
-		744662CF1779C868001980E7 /* Supporting Files */ = {
+		C7220F5317C566C50091BE91 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				742C25331779C99900FA20DF /* InfoPlist.strings */,
-				744662D01779C868001980E7 /* IKBCommandBus-Info.plist */,
-				744662D41779C868001980E7 /* IKBCommandBus-Prefix.pch */,
+				C7220F5417C566C50091BE91 /* InfoPlist.strings */,
+				C7220F5617C566C50091BE91 /* IKBCommandBus-Info.plist */,
+				C7220F5717C566C50091BE91 /* IKBCommandBus-Prefix.pch */,
 			);
-			name = "Supporting Files";
+			path = Support;
 			sourceTree = "<group>";
 		};
-		744662E51779C868001980E7 /* IKBCommandBusTests */ = {
+		C7220F6817C567400091BE91 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				744662EB1779C868001980E7 /* IKBCommandBusTests.h */,
-				744662EC1779C868001980E7 /* IKBCommandBusTests.m */,
-				744662E61779C868001980E7 /* Supporting Files */,
+				C7220F6917C567400091BE91 /* IKBCommandBusTests.h */,
+				C7220F6A17C567400091BE91 /* IKBCommandBusTests.m */,
+				C7220F6B17C567400091BE91 /* Support */,
 			);
-			path = IKBCommandBusTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
-		744662E61779C868001980E7 /* Supporting Files */ = {
+		C7220F6B17C567400091BE91 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				744662E71779C868001980E7 /* IKBCommandBusTests-Info.plist */,
-				744662E81779C868001980E7 /* InfoPlist.strings */,
+				C7220F6C17C567400091BE91 /* InfoPlist.strings */,
+				C7220F6E17C567400091BE91 /* IKBCommandBusTests-Info.plist */,
 			);
-			name = "Supporting Files";
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +217,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742C252F1779C91700FA20DF /* IKBCommand.h in Headers */,
-				742C25301779C91700FA20DF /* IKBCommandBus.h in Headers */,
-				742C25311779C91700FA20DF /* IKBCommandHandler.h in Headers */,
+				C7220F5A17C566C50091BE91 /* IKBCommandBus.h in Headers */,
+				C7220F5F17C566C50091BE91 /* IKBCommandHandler.h in Headers */,
+				C7220F5917C566C50091BE91 /* IKBCommandBus+Extension.h in Headers */,
+				C7220F5817C566C50091BE91 /* IKBCommand.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +285,24 @@
 			productReference = C76662A6177E2517009151FA /* libIKBCommandBus-iOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		C7220F2C17C562B60091BE91 /* IKBCommandBus-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7220F4217C562B60091BE91 /* Build configuration list for PBXNativeTarget "IKBCommandBus-iOSTests" */;
+			buildPhases = (
+				C7220F2917C562B60091BE91 /* Sources */,
+				C7220F2A17C562B60091BE91 /* Frameworks */,
+				C7220F2B17C562B60091BE91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7220F3317C562B60091BE91 /* PBXTargetDependency */,
+			);
+			name = "IKBCommandBus-iOSTests";
+			productName = "IKBCommandBus-iOSTests";
+			productReference = C7220F2D17C562B60091BE91 /* IKBCommandBus-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -260,6 +311,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Graham Lee";
+				TargetAttributes = {
+					C7220F2C17C562B60091BE91 = {
+						TestTargetID = 744662C81779C868001980E7;
+					};
+				};
 			};
 			buildConfigurationList = 744662C01779C868001980E7 /* Build configuration list for PBXProject "IKBCommandBus" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -276,6 +332,7 @@
 				744662C81779C868001980E7 /* IKBCommandBus */,
 				744662D91779C868001980E7 /* IKBCommandBusTests */,
 				C76662A5177E2517009151FA /* IKBCommandBus-iOS */,
+				C7220F2C17C562B60091BE91 /* IKBCommandBus-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -285,7 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742C25351779C99900FA20DF /* InfoPlist.strings in Resources */,
+				C7220F6017C566C50091BE91 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +350,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744662EA1779C868001980E7 /* InfoPlist.strings in Resources */,
+				C7220F6117C566C50091BE91 /* InfoPlist.strings in Resources */,
+				C7220F7117C567400091BE91 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7220F2B17C562B60091BE91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7220F6717C566D10091BE91 /* IKBCommandBus-Info.plist in Resources */,
+				C7220F7217C567400091BE91 /* InfoPlist.strings in Resources */,
+				C7220F6217C566C50091BE91 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				742C252A1779C8D500FA20DF /* IKBCommandBus.m in Sources */,
+				C7220F5B17C566C50091BE91 /* IKBCommandBus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +435,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				744662ED1779C868001980E7 /* IKBCommandBusTests.m in Sources */,
+				C7220F5C17C566C50091BE91 /* IKBCommandBus.m in Sources */,
+				C7220F6F17C567400091BE91 /* IKBCommandBusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7220F1C17C562B60091BE91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7220F5D17C566C50091BE91 /* IKBCommandBus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C76662C9177E2532009151FA /* IKBCommandBus.m in Sources */,
+				C7220F7017C567400091BE91 /* IKBCommandBusTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,21 +470,26 @@
 			target = 744662C81779C868001980E7 /* IKBCommandBus */;
 			targetProxy = 744662E21779C868001980E7 /* PBXContainerItemProxy */;
 		};
+		C7220F3317C562B60091BE91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7220F1F17C562B60091BE91 /* IKBCommandBus-iOS */;
+			targetProxy = C7220F3217C562B60091BE91 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		742C25331779C99900FA20DF /* InfoPlist.strings */ = {
+		C7220F5417C566C50091BE91 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				742C25341779C99900FA20DF /* en */,
+				C7220F5517C566C50091BE91 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		744662E81779C868001980E7 /* InfoPlist.strings */ = {
+		C7220F6C17C567400091BE91 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				744662E91779C868001980E7 /* en */,
+				C7220F6D17C567400091BE91 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -475,10 +558,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IKBCommandBus-Prefix.pch";
+				GCC_PREFIX_HEADER = "Library/Support/IKBCommandBus-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "IKBCommandBus-Info.plist";
+				INFOPLIST_FILE = "Library/Support/IKBCommandBus-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -492,10 +576,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IKBCommandBus-Prefix.pch";
+				GCC_PREFIX_HEADER = "Library/Support/IKBCommandBus-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
-				INFOPLIST_FILE = "IKBCommandBus-Info.plist";
+				INFOPLIST_FILE = "Library/Support/IKBCommandBus-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -544,6 +629,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IKBCommandBus-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -574,6 +662,63 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C7220F3F17C562B60091BE91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKBCommandBus-iOS/IKBCommandBus-iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "IKBCommandBus-iOSTests/IKBCommandBus-iOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C7220F4017C562B60091BE91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKBCommandBus-iOS/IKBCommandBus-iOS-Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "IKBCommandBus-iOSTests/IKBCommandBus-iOSTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -608,6 +753,15 @@
 			defaultConfigurationName = Release;
 		};
 		C76662C7177E2517009151FA /* Build configuration list for PBXNativeTarget "IKBCommandBus-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7220F3D17C562B60091BE91 /* Debug */,
+				C7220F3E17C562B60091BE91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7220F4217C562B60091BE91 /* Build configuration list for PBXNativeTarget "IKBCommandBus-iOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C76662C3177E2517009151FA /* Debug */,

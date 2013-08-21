@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>830A2CD2-623C-428F-8C05-60ED6D929354</string>
+	<key>IDESourceControlProjectName</key>
+	<string>IKBCommandBus</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>03EF1CAF-8E91-4D3F-9D42-270A0EDD65EA</key>
+		<string>ssh://codeplane.com/magicalpanda/IKBCommandBus.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>IKBCommandBus/IKBCommandBus.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>03EF1CAF-8E91-4D3F-9D42-270A0EDD65EA</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://codeplane.com/magicalpanda/IKBCommandBus.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>03EF1CAF-8E91-4D3F-9D42-270A0EDD65EA</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>03EF1CAF-8E91-4D3F-9D42-270A0EDD65EA</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IKBCommandBus</string>
+		</dict>
+	</array>
+</dict>
+</plist>

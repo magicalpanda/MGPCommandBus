@@ -14,7 +14,6 @@
 		C76B93EC17C5858E00624CFD /* libIKBCommandBus-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93D417C5858E00624CFD /* libIKBCommandBus-iOS.a */; };
 		C76B940217C5862D00624CFD /* IKBCommandBusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B93FD17C5862D00624CFD /* IKBCommandBusTests.m */; };
 		C76B940317C5862D00624CFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C76B93FF17C5862D00624CFD /* InfoPlist.strings */; };
-		C76B940417C5862D00624CFD /* IKBCommandBusTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C76B940117C5862D00624CFD /* IKBCommandBusTests-Info.plist */; };
 		C76B940517C5866000624CFD /* IKBCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B93C917C5857800624CFD /* IKBCommandBus.m */; };
 /* End PBXBuildFile section */
 
@@ -223,7 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C76B940417C5862D00624CFD /* IKBCommandBusTests-Info.plist in Resources */,
 				C76B940317C5862D00624CFD /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +278,7 @@
 		C75F131B17C58555008B622B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};

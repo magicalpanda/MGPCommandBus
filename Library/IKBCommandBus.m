@@ -78,7 +78,9 @@ static IKBCommandBus *_defaultBus;
     }
     for (id <IKBCommandHandler> thisHandler in matchingHandlers)
     {
-        NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget: thisHandler selector: @selector(executeCommand:) object: command];
+        NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget:thisHandler
+                                                                                       selector:@selector(executeCommand:)
+                                                                                         object:command];
         [_queue addOperation: executeOperation];
         [executeOperation release];
     }

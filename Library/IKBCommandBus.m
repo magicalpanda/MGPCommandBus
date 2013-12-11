@@ -76,7 +76,7 @@ void IKBCommandBusZeroHandlers(id <IKBCommand> command)
     return canHandleCommand;
 }
 
-- (BOOL)execute:(id <IKBCommand>)command
+- (NSSet *) handlersForCommand:(id<IKBCommand>)command;
 {
     NSSet *matchingHandlers = [_handlers objectsPassingTest: ^(id<IKBCommandHandler> thisHandler, BOOL *stop){
         return [thisHandler canHandleCommand:command];
@@ -85,6 +85,12 @@ void IKBCommandBusZeroHandlers(id <IKBCommand> command)
     {
         IKBCommandBusZeroHandlers(command);
     }
+    return matchingHandlers;
+}
+
+- (BOOL)execute:(id <IKBCommand>)command
+{
+    NSSet *matchingHandlers = [self handlersForCommand:command];
     for (id <IKBCommandHandler> thisHandler in matchingHandlers)
     {
         NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget:thisHandler

@@ -30,6 +30,7 @@
  */
 @protocol IKBCommand <NSObject, NSCoding>
 
+@property (nonatomic, weak, readwrite) id sender;
 /**
  * This property is currently unused.
  */

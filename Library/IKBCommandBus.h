@@ -28,20 +28,28 @@
  */
 @interface IKBCommandBus : NSObject
 
+///**
+// * A convenience method to get a shared bus everywhere in your app. While
+// * IKBCommandBus is not a singleton, you need to register handlers and
+// * submit commands to the same bus which can be arranged via this method.
+// */
+//+ (instancetype)applicationCommandBus;
+
 /**
- * A convenience method to get a shared bus everywhere in your app. While
- * IKBCommandBus is not a singleton, you need to register handlers and
- * submit commands to the same bus which can be arranged via this method.
+ Check if a command as configured can be executed. Useful for determining if
+ visual state of onscreen elements such as buttons to toggle as on or off.
  */
-+ (instancetype)applicationCommandBus;
+- (BOOL) commandCanExecute:(id<IKBCommand>)command;
 
 /**
  * Request a command be performed. The command should conform to IKBCommand,
  * and additionally specify any additional data needed. As an example, a
  * contacts app might have an "add person" command which carries a name,
  * phone number, email address and so on.
+ 
+ @return BOOL specifies if the command was handled by a handler
  */
-- (void)execute: (id <IKBCommand>)command;
+- (BOOL)execute:(id <IKBCommand>)command;
 
 /**
  * Add a handler object to the command bus.

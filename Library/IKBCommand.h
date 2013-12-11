@@ -33,6 +33,6 @@
 /**
  * This property is currently unused.
  */
-@property (nonatomic, readonly) NSUUID *identifier;
+//@property (nonatomic, readonly) NSUUID *identifier;
 
 @end

@@ -30,10 +30,44 @@
  */
 @protocol IKBCommand <NSObject, NSCoding>
 
-@property (nonatomic, weak, readwrite) id sender;
+@property (nonatomic, assign, readwrite) id sender;
+
+@property (nonatomic, assign) id<IKBCommand> parentCommand;
+@property (nonatomic, strong, readonly) NSSet *childCommands;
+
+@optional
+
 /**
  * This property is currently unused.
  */
-//@property (nonatomic, readonly) NSUUID *identifier;
+@property (nonatomic, readonly) NSUUID *identifier;
+@end
+
+@class IKBCommandBus;
+
+@protocol IKBCommandCallback <NSObject>
+
+@optional
+
+- (void) commandWillBegin:(id<IKBCommand>)command;
+- (void) commandDidComplete:(id<IKBCommand>)command;
+- (void) commandDidFail:(id<IKBCommand>)command error:(NSError *)error;
 
 @end
+//
+//@interface IKBCommand : NSObject<IKBCommand>
+//
+//@property (nonatomic, assign, readwrite) id<IKBCommand> parentCommand;
+//
+//- (void) commandWillStart;
+//- (void) commandDidComplete;
+//- (void) commandDidFailWithError:(NSError *)error;
+//
+//@end
+//
+//
+//@interface IKBCommand ()
+//
+//@property (nonatomic, assign, readwrite) IKBCommandBus *commandBus;
+//
+//@end

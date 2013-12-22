@@ -54,7 +54,7 @@
 - (void)setUp
 {
   [super setUp];
-  _defaultBus = [IKBCommandBus applicationCommandBus];
+//  _defaultBus = [IKBCommandBus applicationCommandBus];
   _perTestBus = [IKBCommandBus new];
   [[_perTestBus queue] setSuspended: YES];
   _testCommand = [TestCommand new];
@@ -109,7 +109,8 @@
 @end
 
 @implementation TestCommand
-@synthesize identifier;
+//@synthesize identifier;
+@synthesize sender;
 - (id)initWithCoder:(NSCoder *)aDecoder { self = [super init]; return self; }
 - (void)encodeWithCoder:(NSCoder *)aCoder {}
 @end

@@ -22,6 +22,8 @@
 #import "IKBCommandBus+Extension.h"
 #import "IKBCommand.h"
 #import "IKBCommandHandler.h"
+#import <objc/runtime.h>
+
 
 void IKBCommandBusZeroHandlers(id <IKBCommand> command)
 {
@@ -29,48 +31,51 @@ void IKBCommandBusZeroHandlers(id <IKBCommand> command)
     NSLog(@"Break in IKBCommandBusZeroHandlers() to debug.");
 }
 
+@interface IKBCommandBus ()
+
+@property (nonatomic, strong, readwrite) NSMutableSet *queuedCommands;
+
+@property (nonatomic, strong, readonly) NSOperationQueue *queue;
+@property (nonatomic, strong, readonly) NSMutableDictionary *handlers;
+@property (nonatomic, strong, readwrite) NSSet *handlersSet;
+
+@end
+
+
 @implementation IKBCommandBus
+
+@synthesize queue = _queue;
+@synthesize handlers = _handlers;
+
+- (void) registerHandlerClasses:(id<NSFastEnumeration>)classes;
 {
-    NSOperationQueue *_queue;
-    NSSet *_handlers;
-}
-
-//static IKBCommandBus *_defaultBus;
-
-//+ (void)initialize
-//{
-//    if (self == [IKBCommandBus class])
-//    {
-//        _defaultBus = [self new];
-//    }
-//}
-//
-//+ (instancetype)applicationCommandBus
-//{
-//    return _defaultBus;
-//}
-
-- (id)init
-{
-    self = [super init];
-    if (self)
+    for (Class klass in classes)
     {
-        _queue = [NSOperationQueue new];
-        _handlers = [[NSSet set] retain];
+        [self registerCommandHandlerClass:klass];
     }
-    return self;
 }
 
-- (void)registerCommandHandler:(id <IKBCommandHandler>)handler
+- (void) registerCommandHandlerClass:(Class)klass;
+{
+//    NSString *className = NSStringFromClass(klass);
+//    [self.handlers setValue:[klass new] forKey:className];
+    [self registerCommandHandler:[klass new]];
+}
+
+- (void) registerCommandHandler:(id <IKBCommandHandler>)handler
 {
     NSParameterAssert(handler);
-    _handlers = [[[_handlers autorelease] setByAddingObject:handler] retain];
+    NSAssert([handler conformsToProtocol:@protocol(IKBCommandHandler)], @"%@ does not comform to protocol '%@'", handler, @"IKBCommandHandler");
+    
+    [self.handlers setValue:handler forKey:NSStringFromClass([handler class])];
+    self.handlersSet = [NSSet setWithArray:[self.handlers allValues]];
 }
 
 - (BOOL) commandCanExecute:(id<IKBCommand>)command;
 {
     __block BOOL canHandleCommand = (command != nil);
-    [_handlers enumerateObjectsUsingBlock:^(id<IKBCommandHandler> handler, BOOL *stop) {
+    [self.handlersSet enumerateObjectsUsingBlock:^(id<IKBCommandHandler> handler, BOOL *stop) {
+
         canHandleCommand &= [handler canHandleCommand:command];
     }];
     return canHandleCommand;
@@ -78,7 +83,7 @@ void IKBCommandBusZeroHandlers(id <IKBCommand> command)
 
 - (NSSet *) handlersForCommand:(id<IKBCommand>)command;
 {
-    NSSet *matchingHandlers = [_handlers objectsPassingTest: ^(id<IKBCommandHandler> thisHandler, BOOL *stop){
+    NSSet *matchingHandlers = [self.handlersSet objectsPassingTest: ^(id<IKBCommandHandler> thisHandler, BOOL *stop){
         return [thisHandler canHandleCommand:command];
     }];
     if ([matchingHandlers count] == 0)
@@ -88,30 +93,101 @@ void IKBCommandBusZeroHandlers(id <IKBCommand> command)
     return matchingHandlers;
 }
 
+- (NSOperation *) operationWithHandler:(id<IKBCommandHandler>)handler forCommand:(id<IKBCommand>)command;
+{
+    id sender = [command sender];
+    __weak typeof(self) weakSelf = self;
+    NSSet *childCommands = [self.queuedCommands filteredSetUsingPredicate:[NSPredicate predicateWithFormat:@"parentCommand = %@", command]];
+    NSBlockOperation *executeOperation = [NSBlockOperation blockOperationWithBlock:^{
+        if ([sender respondsToSelector:@selector(commandWillBegin:)])
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [sender commandWillBegin:command];
+            });
+        }
+        
+        NSError *error = nil;
+        BOOL success = [handler executeCommand:command error:&error];
+        if (!success)
+        {
+            NSLog(@"Command %@ failed %@", command, error);
+            if ([sender respondsToSelector:@selector(commandDidFail:error:)])
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [sender commandDidFail:command error:error];
+                });
+            }
+        }
+        else
+        {
+            if ([sender respondsToSelector:@selector(commandDidComplete:)])
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [sender commandDidComplete:command];
+                });
+            }
+
+            for (id<IKBCommand> childCommand in childCommands)
+            {
+                [childCommand setParentCommand:nil];
+                [weakSelf.queuedCommands removeObject:childCommand];
+                [weakSelf execute:childCommand];
+            }
+        }
+    }];
+    return executeOperation;
+}
+
 - (BOOL)execute:(id <IKBCommand>)command
 {
-    NSSet *matchingHandlers = [self handlersForCommand:command];
-    for (id <IKBCommandHandler> thisHandler in matchingHandlers)
+    id<IKBCommand> parentCommand = [command parentCommand];
+    if (parentCommand) //if have a parent command, add to pending
     {
-        NSInvocationOperation *executeOperation = [[NSInvocationOperation alloc] initWithTarget:thisHandler
-                                                                                       selector:@selector(executeCommand:)
-                                                                                         object:command];
-        [_queue addOperation:executeOperation];
-        [executeOperation release];
+        [self.queuedCommands addObject:command];
     }
-    return [matchingHandlers count] > 0;
+    //if a command has children, add them, then run command
+    NSSet *childCommands = [command childCommands];
+    [self.queuedCommands addObjectsFromArray:[childCommands allObjects]];
+
+    BOOL commandWasHandled = NO;
+    if (![self.queuedCommands containsObject:command])
+    {
+        NSSet *matchingHandlers = [self handlersForCommand:command];
+        for (id <IKBCommandHandler> thisHandler in matchingHandlers)
+        {
+            NSOperation *executeOperation = [self operationWithHandler:thisHandler forCommand:command];
+            [self.queue addOperation:executeOperation];
+        }
+        commandWasHandled = [matchingHandlers count] > 0;
+    }
+    return commandWasHandled;
 }
 
-- (void)dealloc
+- (NSOperationQueue *) queue;
 {
-    [_queue release];
-    [_handlers release];
-    [super dealloc];
-}
-
-- (NSOperationQueue *)queue
-{
+    if (_queue == nil)
+    {
+        _queue = [NSOperationQueue new];
+    }
     return _queue;
+}
+
+- (NSMutableDictionary *)handlers;
+{
+    if (_handlers == nil)
+    {
+        _handlers = [NSMutableDictionary dictionary];
+    }
+    return _handlers;
+}
+
+- (NSMutableSet *) queuedCommands;
+{
+    if (_queuedCommands == nil)
+    {
+        _queuedCommands = [NSMutableSet set];
+    }
+    return _queuedCommands;
 }
 
 @end

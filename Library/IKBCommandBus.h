@@ -56,4 +56,6 @@
  */
 - (void)registerCommandHandler: (id <IKBCommandHandler>)handler;
 
+- (void) registerHandlerClasses:(id<NSFastEnumeration>)classes;
+
 @end

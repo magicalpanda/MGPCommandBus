@@ -40,7 +40,10 @@
  *       don't make any assumptions about the thread or queue it's running in.
  *       Particularly, be aware that this method could be called concurrently
  *       on different threads.
+ @parameter error an error that occured during operation
+ @return BOOL indicate command succeeded or failed
+
  */
-- (void)executeCommand: (id <IKBCommand>)command;
+- (BOOL) executeCommand: (id <IKBCommand>)command error:(NSError **)error;
 
 @end

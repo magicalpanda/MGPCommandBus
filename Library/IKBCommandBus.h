@@ -58,4 +58,6 @@
 
 - (void) registerHandlerClasses:(id<NSFastEnumeration>)classes;
 
+- (void) registerCommandHandlerClass:(Class)klass;
+
 @end

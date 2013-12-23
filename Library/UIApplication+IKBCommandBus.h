@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IKBCommandBus.h"
 
-@class IKBCommandBus;
 @protocol IKBCommand;
-
 
 @interface UIApplication (IKBCommandBusAdditions)
 
@@ -24,6 +23,7 @@
 - (BOOL) canExecuteCommand:(id<IKBCommand>)command;
 
 @end
+
 
 @protocol IKBCommandBusDelegate <UIApplicationDelegate>
 

@@ -22,6 +22,8 @@
 
 @interface MGPCommandBus ()
 
+@property (nonatomic, strong, readwrite) NSMutableSet *queuedCommands;
+
 - (NSOperationQueue *) queue;
 - (NSMutableDictionary *) handlers;
 

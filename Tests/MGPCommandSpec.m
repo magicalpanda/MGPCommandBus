@@ -5,9 +5,14 @@ SpecBegin(MGPCommand)
 
 describe(@"Command", ^{
 
-    it(@"do something", ^{
+    it(@"should be equal", ^{
         
     });
+    
+    it(@"should not be equal", ^{
+        
+    });
+    
 });
 
 

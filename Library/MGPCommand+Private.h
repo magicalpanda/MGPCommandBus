@@ -6,12 +6,8 @@
 //
 //
 
-#import "IKBCommand.h"
+#import "MGPCommand.h"
 
 @interface MGPCommand ()
-
-- (void) commandWillStart;
-- (void) commandDidComplete;
-- (void) commandDidFailWithError:(NSError *)error;
 
 @end

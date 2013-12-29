@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		C7101D29186F7129006AC00B /* MGPCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D28186F7129006AC00B /* MGPCommandSpec.m */; };
 		C7101D2B186F716F006AC00B /* MGPCommandHandlerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D2A186F716F006AC00B /* MGPCommandHandlerSpec.m */; };
+		C73DA4C7186F8A3D00F731C7 /* MGPCommandBusHandlersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */; };
 		C791BE79186F41D0005453E6 /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C791BE5F186F41D0005453E6 /* libExpecta-ios-universal.a */; };
 		C791BE7D186F41D1005453E6 /* libSpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C791BE66186F41D0005453E6 /* libSpecta-ios-universal.a */; };
-		C791BE83186F4243005453E6 /* MGPCommandBusSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C791BE82186F4243005453E6 /* MGPCommandBusSpec.m */; };
+		C791BE83186F4243005453E6 /* MGPCommandBusCommandsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C791BE82186F4243005453E6 /* MGPCommandBusCommandsSpec.m */; };
+		C7C3BC3D186F7A2900AB1D4B /* MGPCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */; };
+		C7C3BC42186F810B00AB1D4B /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC41186F810B00AB1D4B /* TestHelpers.m */; };
 		C7D85BB4186F5CB7007C36C3 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */; };
 		C7F5450E18666F42000A7BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93D717C5858E00624CFD /* Foundation.framework */; };
 		C7F5451B18666F42000A7BB5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93E517C5858E00624CFD /* XCTest.framework */; };
@@ -48,7 +51,7 @@
 		C7101D28186F7129006AC00B /* MGPCommandSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandSpec.m; sourceTree = "<group>"; };
 		C7101D2A186F716F006AC00B /* MGPCommandHandlerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandHandlerSpec.m; sourceTree = "<group>"; };
 		C76B93C617C5857800624CFD /* MGPCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPCommand.h; sourceTree = "<group>"; };
-		C76B93C717C5857800624CFD /* MGPCommandBus+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGPCommandBus+Extension.h"; sourceTree = "<group>"; };
+		C76B93C717C5857800624CFD /* MGPCommandBus+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGPCommandBus+Private.h"; sourceTree = "<group>"; };
 		C76B93C817C5857800624CFD /* MGPCommandBus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPCommandBus.h; sourceTree = "<group>"; };
 		C76B93C917C5857800624CFD /* MGPCommandBus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBus.m; sourceTree = "<group>"; };
 		C76B93CA17C5857800624CFD /* MGPCommandHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPCommandHandler.h; sourceTree = "<group>"; };
@@ -117,10 +120,16 @@
 		C791BE76186F41D0005453E6 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Specta.h"; sourceTree = "<group>"; };
 		C791BE77186F41D0005453E6 /* XCTestLog+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestLog+Specta.h"; sourceTree = "<group>"; };
 		C791BE78186F41D0005453E6 /* XCTestRun+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestRun+Specta.h"; sourceTree = "<group>"; };
-		C791BE82186F4243005453E6 /* MGPCommandBusSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBusSpec.m; sourceTree = "<group>"; };
+		C791BE82186F4243005453E6 /* MGPCommandBusCommandsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBusCommandsSpec.m; sourceTree = "<group>"; };
 		C79860821866650300D9617B /* UIApplication+MGPCommandBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MGPCommandBus.h"; sourceTree = "<group>"; };
 		C79860831866650300D9617B /* UIApplication+MGPCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MGPCommandBus.m"; sourceTree = "<group>"; };
 		C79860851866653900D9617B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C7C3BC3A186F74ED00AB1D4B /* MGPCommandBusInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGPCommandBusInterface.h; path = Library/MGPCommandBusInterface.h; sourceTree = "<group>"; };
+		C7C3BC3B186F7A2900AB1D4B /* MGPCommandOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPCommandOperation.h; sourceTree = "<group>"; };
+		C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandOperation.m; sourceTree = "<group>"; };
+		C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBusHandlersSpec.m; sourceTree = "<group>"; };
+		C7C3BC40186F810B00AB1D4B /* TestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelpers.h; sourceTree = "<group>"; };
+		C7C3BC41186F810B00AB1D4B /* TestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelpers.m; sourceTree = "<group>"; };
 		C7C494A2186F3D4900496A32 /* MGPCommandBusTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MGPCommandBusTests-Info.plist"; sourceTree = "<group>"; };
 		C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommand.m; sourceTree = "<group>"; };
 		C7D85BB5186F5D14007C36C3 /* MGPCommand+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGPCommand+Private.h"; sourceTree = "<group>"; };
@@ -156,6 +165,7 @@
 		C75F131617C58555008B622B = {
 			isa = PBXGroup;
 			children = (
+				C7C3BC3A186F74ED00AB1D4B /* MGPCommandBusInterface.h */,
 				C76B93C517C5857800624CFD /* Library */,
 				C76B93FB17C5862D00624CFD /* Tests */,
 				C76B93D617C5858E00624CFD /* Frameworks */,
@@ -171,8 +181,10 @@
 				C76B93C617C5857800624CFD /* MGPCommand.h */,
 				C7D85BB5186F5D14007C36C3 /* MGPCommand+Private.h */,
 				C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */,
-				C76B93C717C5857800624CFD /* MGPCommandBus+Extension.h */,
+				C7C3BC3B186F7A2900AB1D4B /* MGPCommandOperation.h */,
+				C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */,
 				C76B93C817C5857800624CFD /* MGPCommandBus.h */,
+				C76B93C717C5857800624CFD /* MGPCommandBus+Private.h */,
 				C76B93C917C5857800624CFD /* MGPCommandBus.m */,
 				C76B93CA17C5857800624CFD /* MGPCommandHandler.h */,
 				C76B93CB17C5857800624CFD /* Support */,
@@ -213,11 +225,14 @@
 		C76B93FB17C5862D00624CFD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C791BE82186F4243005453E6 /* MGPCommandBusSpec.m */,
+				C791BE82186F4243005453E6 /* MGPCommandBusCommandsSpec.m */,
+				C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */,
 				C7101D2A186F716F006AC00B /* MGPCommandHandlerSpec.m */,
 				C7101D28186F7129006AC00B /* MGPCommandSpec.m */,
 				C76B93FE17C5862D00624CFD /* Support */,
 				C791BE3C186F41D0005453E6 /* Vendor */,
+				C7C3BC40186F810B00AB1D4B /* TestHelpers.h */,
+				C7C3BC41186F810B00AB1D4B /* TestHelpers.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -391,6 +406,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C3BC3D186F7A2900AB1D4B /* MGPCommandOperation.m in Sources */,
+				C7C3BC42186F810B00AB1D4B /* TestHelpers.m in Sources */,
 				C7F5452F18666FF7000A7BB5 /* UIApplication+MGPCommandBus.m in Sources */,
 				C7F5453018666FF7000A7BB5 /* MGPCommandBus.m in Sources */,
 				C7D85BB4186F5CB7007C36C3 /* MGPCommand.m in Sources */,
@@ -402,8 +419,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7101D2B186F716F006AC00B /* MGPCommandHandlerSpec.m in Sources */,
-				C791BE83186F4243005453E6 /* MGPCommandBusSpec.m in Sources */,
+				C791BE83186F4243005453E6 /* MGPCommandBusCommandsSpec.m in Sources */,
 				C7101D29186F7129006AC00B /* MGPCommandSpec.m in Sources */,
+				C73DA4C7186F8A3D00F731C7 /* MGPCommandBusHandlersSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

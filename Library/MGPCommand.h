@@ -30,10 +30,14 @@
  */
 @protocol MGPCommand <NSObject, NSCoding>
 
-@property (nonatomic, assign, readwrite) id sender;
+@property (weak, readwrite) id sender;
 
-@property (nonatomic, assign) id<MGPCommand> parentCommand;
-@property (nonatomic, strong, readonly) NSSet *childCommands;
+@property (weak) id<MGPCommand> parentCommand;
+@property (strong, readonly) NSSet *childCommands;
+
+- (void) commandWillStart;
+- (void) commandDidComplete;
+- (void) commandDidFailWithError:(NSError *)error;
 
 @optional
 
@@ -44,13 +48,11 @@
 
 @end
 
-//@class IKBCommandBus;
-
 @protocol MGPCommandCallback <NSObject>
 
 @optional
 
-- (void) commandWillBegin:(id<MGPCommand>)command;
+- (void) commandWillStart:(id<MGPCommand>)command;
 - (void) commandDidComplete:(id<MGPCommand>)command;
 - (void) commandDidFail:(id<MGPCommand>)command error:(NSError *)error;
 
@@ -58,8 +60,8 @@
 
 @interface MGPCommand : NSObject<MGPCommand>
 
-@property (nonatomic, copy, readonly) NSError *error;
-@property (nonatomic, assign, readwrite) id<MGPCommand> parentCommand;
+@property (copy, readonly) NSError *error;
+@property (assign, readwrite) id<MGPCommand> parentCommand;
 
 @end
 

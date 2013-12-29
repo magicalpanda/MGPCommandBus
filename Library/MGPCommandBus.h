@@ -20,7 +20,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MGPCommand.h"
-#import "IKBCommandHandler.h"
+#import "MGPCommandHandler.h"
 
 /**
  * The command bus accepts commands from the application and schedules work
@@ -51,12 +51,15 @@
  
  @return BOOL specifies if the command was handled by a handler
  */
-- (BOOL)execute:(id <MGPCommand>)command;
+- (BOOL) execute:(id<MGPCommand>)command;
+
+- (BOOL) execute:(id<MGPCommand>)priorCommand before:(id<MGPCommand>)laterCommand;
+- (BOOL) execute:(id<MGPCommand>)laterCommand after:(id<MGPCommand>)priodCommand;
 
 /**
  * Add a handler object to the command bus.
  */
-- (void)registerCommandHandler: (id <MGPCommandHandler>)handler;
+- (void) registerCommandHandler: (id<MGPCommandHandler>)handler;
 
 - (void) registerHandlerClasses:(id<NSFastEnumeration>)classes;
 

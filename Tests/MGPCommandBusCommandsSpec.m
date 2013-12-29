@@ -14,7 +14,7 @@
 #import "TestHelpers.h"
 
 
-SpecBegin(IKBCommandBus)
+SpecBegin(MGPCommandBus)
 
 describe(@"Command Bus", ^{
     

@@ -10,11 +10,11 @@
 		C7101D29186F7129006AC00B /* MGPCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D28186F7129006AC00B /* MGPCommandSpec.m */; };
 		C7101D2B186F716F006AC00B /* MGPCommandHandlerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D2A186F716F006AC00B /* MGPCommandHandlerSpec.m */; };
 		C73DA4C7186F8A3D00F731C7 /* MGPCommandBusHandlersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */; };
+		C73DA4EF1870ACA500F731C7 /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC41186F810B00AB1D4B /* TestHelpers.m */; };
 		C791BE79186F41D0005453E6 /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C791BE5F186F41D0005453E6 /* libExpecta-ios-universal.a */; };
 		C791BE7D186F41D1005453E6 /* libSpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C791BE66186F41D0005453E6 /* libSpecta-ios-universal.a */; };
 		C791BE83186F4243005453E6 /* MGPCommandBusCommandsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C791BE82186F4243005453E6 /* MGPCommandBusCommandsSpec.m */; };
 		C7C3BC3D186F7A2900AB1D4B /* MGPCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */; };
-		C7C3BC42186F810B00AB1D4B /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC41186F810B00AB1D4B /* TestHelpers.m */; };
 		C7D85BB4186F5CB7007C36C3 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */; };
 		C7F5450E18666F42000A7BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93D717C5858E00624CFD /* Foundation.framework */; };
 		C7F5451B18666F42000A7BB5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93E517C5858E00624CFD /* XCTest.framework */; };
@@ -407,7 +407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C3BC3D186F7A2900AB1D4B /* MGPCommandOperation.m in Sources */,
-				C7C3BC42186F810B00AB1D4B /* TestHelpers.m in Sources */,
 				C7F5452F18666FF7000A7BB5 /* UIApplication+MGPCommandBus.m in Sources */,
 				C7F5453018666FF7000A7BB5 /* MGPCommandBus.m in Sources */,
 				C7D85BB4186F5CB7007C36C3 /* MGPCommand.m in Sources */,
@@ -422,6 +421,7 @@
 				C791BE83186F4243005453E6 /* MGPCommandBusCommandsSpec.m in Sources */,
 				C7101D29186F7129006AC00B /* MGPCommandSpec.m in Sources */,
 				C73DA4C7186F8A3D00F731C7 /* MGPCommandBusHandlersSpec.m in Sources */,
+				C73DA4EF1870ACA500F731C7 /* TestHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,7 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 			};
 			name = Debug;
 		};
@@ -477,7 +477,7 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -506,10 +506,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "MGPCommandBus-iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -520,7 +522,7 @@
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -543,10 +545,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "MGPCommandBus-iOS";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

@@ -242,13 +242,14 @@ describe(@"Command Bus", ^{
             });
             
             describe(@"order", ^{
-                __block TimeStampTestSender *firstCommandSender = nil;
-                __block TimeStampTestSender *secondCommandSender = nil;
+                __block SharedBufferSender *firstCommandSender = nil;
+                __block SharedBufferSender *secondCommandSender = nil;
                 
                 beforeEach(^{
                     
-                    firstCommandSender = [TimeStampTestSender new];
-                    secondCommandSender = [TimeStampTestSender new];
+                    [SharedBufferSender clearBuffer];
+                    firstCommandSender = [[SharedBufferSender alloc] initWithIdentifier:@"firstCommand"];
+                    secondCommandSender = [[SharedBufferSender alloc] initWithIdentifier:@"secondCommand"];
                     
                     [testBus registerCommandHandlerClass:[TestCommandHandler class]];
                     [[testBus queue] setSuspended:NO];
@@ -265,8 +266,7 @@ describe(@"Command Bus", ^{
                     
                     [testBus execute:firstCommand before:testCommand];
                     
-                    expect([firstCommandSender isBefore:secondCommandSender]).will.beTruthy();
-
+                    expect([SharedBufferSender buffer]).will.equal(@":Starting:firstCommand:Completed:firstCommand:Starting:secondCommand:Completed:secondCommand");
                 });
                 
                 it(@"should execute after command", ^{
@@ -275,8 +275,8 @@ describe(@"Command Bus", ^{
                     [testCommand setSender:firstCommandSender];
                     
                     [testBus execute:secondCommand after:testCommand];
-                    
-                    expect([firstCommandSender isBefore:secondCommandSender]).will.beTruthy();
+
+                    expect([SharedBufferSender buffer]).will.equal(@":Starting:firstCommand:Completed:firstCommand:Starting:secondCommand:Completed:secondCommand");
                 });
             });
         });

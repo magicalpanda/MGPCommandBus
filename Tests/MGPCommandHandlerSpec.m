@@ -3,7 +3,7 @@
 
 SpecBegin(MGPCommandHandler)
 
-describe(@"MGPCommandHandler", ^{
+xdescribe(@"MGPCommandHandler", ^{
 
     it(@"handle commands", ^{
         

@@ -39,6 +39,8 @@
 - (void) commandDidComplete;
 - (void) commandDidFailWithError:(NSError *)error;
 
+- (void) removeAllChildCommands;
+
 @optional
 
 /**

@@ -34,6 +34,15 @@
 
 @end
 
+@interface SharedBufferSender : NSObject<MGPCommandCallback>
+
++ (void) clearBuffer;
++ (NSString *) buffer;
+
+- (id) initWithIdentifier:(NSString *)identifier;
+
+@end
+
 @interface TestCommand : MGPCommand
 
 @end

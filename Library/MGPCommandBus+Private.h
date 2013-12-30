@@ -20,11 +20,14 @@
 
 #import "MGPCommandBus.h"
 
+@class MGPCommandOperation;
+
 @interface MGPCommandBus ()
 
-@property (nonatomic, strong, readwrite) NSMutableSet *queuedCommands;
+@property (nonatomic, strong, readonly) NSOperationQueue *queue;
+@property (nonatomic, strong, readonly) NSMutableSet *handlers;
 
-- (NSOperationQueue *) queue;
-- (NSMutableDictionary *) handlers;
+- (void) commandOperationWillBegin:(MGPCommandOperation *)operation;
+- (void) commandOperationDidComplete:(MGPCommandOperation *)operation;
 
 @end

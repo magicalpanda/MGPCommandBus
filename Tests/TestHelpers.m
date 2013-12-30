@@ -9,6 +9,58 @@
 #import "TestHelpers.h"
 #import "MGPCommandBus+Private.h"
 
+static NSMutableString *sharedBuffer = nil;
+
+@implementation SharedBufferSender
+{
+    NSString *_identifier;
+}
+
++(void)initialize;
+{
+    if ([SharedBufferSender class] == self)
+    {
+        sharedBuffer = [NSMutableString string];
+    }
+}
+
+- (id) initWithIdentifier:(NSString *)identifier;
+{
+    self = [super init];
+    if (self)
+    {
+        _identifier = identifier;
+    }
+    return self;
+}
+
++ (void) clearBuffer;
+{
+    sharedBuffer = [NSMutableString string];
+}
+
++ (NSString *)buffer;
+{
+    return [NSString stringWithString:sharedBuffer];
+}
+
+-(void)commandWillStart:(id<MGPCommand>)command;
+{
+    [sharedBuffer appendFormat:@":Starting:%@", _identifier];
+}
+
+-(void)commandDidComplete:(id<MGPCommand>)command;
+{
+    [sharedBuffer appendFormat:@":Completed:%@", _identifier];
+}
+
+-(void)commandDidFail:(id<MGPCommand>)command error:(NSError *)error;
+{
+    [sharedBuffer appendFormat:@":Failed:%@", _identifier];
+}
+
+@end
+
 @implementation TestCommand
 
 @end

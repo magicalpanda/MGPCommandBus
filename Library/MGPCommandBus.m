@@ -33,8 +33,8 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
 
 @interface MGPCommandBus ()
 
-@property (nonatomic, strong, readonly) NSOperationQueue *queue;
-@property (nonatomic, strong, readonly) NSMutableSet *handlers;
+@property (nonatomic, strong, readonly) NSMutableSet *waitingCommands;
+@property (nonatomic, strong, readonly) NSMutableSet *workingCommands;
 
 @end
 
@@ -43,6 +43,8 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
 
 @synthesize queue = _queue;
 @synthesize handlers = _handlers;
+@synthesize workingCommands = _workingCommands;
+@synthesize waitingCommands = _waitingCommands;
 
 - (void) registerHandlerClasses:(id<NSFastEnumeration>)classes;
 {
@@ -67,15 +69,15 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
 
 - (void) removeAllCommands;
 {
-    [self.queuedCommands removeAllObjects];
+    [self.waitingCommands removeAllObjects];
     [self.queue cancelAllOperations];
 }
 
 - (BOOL) commandCanExecute:(id<MGPCommand>)command;
 {
-    __block BOOL canHandleCommand = (command != nil);
+    __block BOOL canHandleCommand = NO;
     [self.handlers enumerateObjectsUsingBlock:^(id<MGPCommandHandler> handler, BOOL *stop) {
-        canHandleCommand &= [handler canHandleCommand:command];
+        canHandleCommand |= [handler canHandleCommand:command];
     }];
     return canHandleCommand;
 }
@@ -92,35 +94,64 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
     return matchingHandlers;
 }
 
-- (void) queueCommandDependencies:(id<MGPCommand>)command;
+- (void) commandOperationWillBegin:(MGPCommandOperation *)operation;
 {
-    id<MGPCommand> parentCommand = [command parentCommand];
-    if (parentCommand) //if have a parent command, add to pending
+    @synchronized(self)
     {
-        [self.queuedCommands addObject:command];
+        [self.workingCommands addObject:operation.command];
     }
-    
-    //if a command has children, add them, then run command
-    NSSet *childCommands = [command childCommands];
-    [self.queuedCommands addObjectsFromArray:[childCommands allObjects]];
 }
 
-- (BOOL) execute:(id<MGPCommand>)command
+- (void) commandOperationDidComplete:(MGPCommandOperation *)operation;
+{
+    id<MGPCommand> parentCommand = [operation command];
+    @synchronized(self)
+    {
+        [self.workingCommands removeObject:parentCommand];
+    }
+    
+    NSSet *childCommands = [[parentCommand childCommands] copy];
+    [parentCommand removeAllChildCommands];
+    
+    for (id<MGPCommand> childCommand in childCommands)
+    {
+        [self.waitingCommands removeObject:childCommand];
+        [self execute:childCommand];
+    }
+}
+
+- (NSSet *) operationsForCommand:(id<MGPCommand>)command;
+{
+    NSMutableSet *operations = [NSMutableSet set];
+    NSSet *matchingHandlers = [self handlersForCommand:command];
+    for (id<MGPCommandHandler> handler in matchingHandlers)
+    {
+        NSOperation *executeOperation = [MGPCommandOperation operationWithBus:self
+                                                                      command:command
+                                                                      handler:handler];
+        [operations addObject:executeOperation];
+    }
+   
+    return [NSSet setWithSet:operations];
+}
+
+- (BOOL) execute:(id<MGPCommand>)command;
 {
     BOOL commandWasHandled = NO;
-    if (![self.queuedCommands containsObject:command])
+    NSMutableSet *waitingCommands = self.waitingCommands;
+    if ([command parentCommand])
     {
-        [self queueCommandDependencies:command];
-        
-        NSSet *matchingHandlers = [self handlersForCommand:command];
-        for (id<MGPCommandHandler> handler in matchingHandlers)
-        {
-            NSOperation *executeOperation = [[MGPCommandOperation alloc] initWithBus:self
-                                                                             command:command
-                                                                             handler:handler];
-            [self.queue addOperation:executeOperation];
-        }
-        commandWasHandled = [matchingHandlers count] > 0;
+        [waitingCommands addObject:command];
+    }
+    
+    if (![waitingCommands containsObject:command] && ![self.workingCommands containsObject:command])
+    {
+        [waitingCommands unionSet:[command childCommands]];
+
+        NSSet *operations = [self operationsForCommand:command];
+        [self.queue addOperations:[operations allObjects] waitUntilFinished:NO];
+
+        commandWasHandled = [operations count] > 0;
     }
     return commandWasHandled;
 }
@@ -136,11 +167,7 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
 
 - (BOOL) execute:(id<MGPCommand>)laterCommand after:(id<MGPCommand>)priorCommand;
 {
-    [laterCommand setParentCommand:priorCommand];
-    BOOL handled = YES;
-    handled &= [self execute:priorCommand];
-    handled &= [self execute:laterCommand];
-    return handled;
+    return [self execute:priorCommand before:laterCommand];
 }
 
 - (NSOperationQueue *) queue;
@@ -161,13 +188,22 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
     return _handlers;
 }
 
-- (NSMutableSet *) queuedCommands;
+- (NSMutableSet *) waitingCommands;
 {
-    if (_queuedCommands == nil)
+    if (_waitingCommands == nil)
     {
-        _queuedCommands = [NSMutableSet set];
+        _waitingCommands = [NSMutableSet set];
     }
-    return _queuedCommands;
+    return _waitingCommands;
+}
+
+- (NSMutableSet *) workingCommands;
+{
+    if (_workingCommands == nil)
+    {
+        _workingCommands = [NSMutableSet set];
+    }
+    return _workingCommands;
 }
 
 @end

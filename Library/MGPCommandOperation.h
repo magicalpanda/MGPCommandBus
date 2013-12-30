@@ -15,7 +15,9 @@
 
 @property (nonatomic, strong, readonly) id<MGPCommand> command;
 @property (nonatomic, strong, readonly) id<MGPCommandHandler> handler;
-@property (nonatomic, strong, readonly) MGPCommandBus *commandBus;
+@property (nonatomic, weak, readonly) MGPCommandBus *commandBus;
+
++ (instancetype) operationWithBus:(MGPCommandBus *)bus command:(id<MGPCommand>)command handler:(id<MGPCommandHandler>)handler;
 
 - (instancetype) initWithBus:(MGPCommandBus *)bus command:(id<MGPCommand>)command handler:(id<MGPCommandHandler>)handler;
 

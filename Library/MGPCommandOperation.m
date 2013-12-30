@@ -15,12 +15,17 @@
 
 @property (nonatomic, strong, readwrite) id<MGPCommand> command;
 @property (nonatomic, strong, readwrite) id<MGPCommandHandler> handler;
-@property (nonatomic, strong, readwrite) MGPCommandBus *commandBus;
+@property (nonatomic, weak, readwrite) MGPCommandBus *commandBus;
 
 @end
 
 
 @implementation MGPCommandOperation
+
++ (instancetype) operationWithBus:(MGPCommandBus *)bus command:(id<MGPCommand>)command handler:(id<MGPCommandHandler>)handler;
+{
+    return [[self alloc] initWithBus:bus command:command handler:handler];
+}
 
 - (instancetype) initWithBus:(MGPCommandBus *)bus command:(id<MGPCommand>)command handler:(id<MGPCommandHandler>)handler;
 {
@@ -42,10 +47,11 @@
 {
     id<MGPCommand> command = self.command;
     id<MGPCommandHandler> handler = self.handler;
-    NSSet *childCommands = [command childCommands];
     
     NSAssert(command, @"No command to execute");
     NSAssert(handler, @"No handler to execute command");
+    [self.commandBus commandOperationWillBegin:self];
+    
     [command commandWillStart];
     
     NSError *error = nil;
@@ -57,19 +63,9 @@
     }
     else
     {
-        //when no child commands, if all child commands have no error, send command complete
-        [command commandDidComplete];
-        
-        //if child commands, execute child commands.
-        for (id<MGPCommand> childCommand in childCommands)
-        {
-            [childCommand setParentCommand:nil];
-            
-            MGPCommandBus *bus = self.commandBus;
-            [bus.queuedCommands removeObject:childCommand];
-            [bus execute:childCommand];
-        }
+        [command commandDidComplete];        
     }
+    [self.commandBus commandOperationDidComplete:self];
 }
 
 @end

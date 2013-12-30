@@ -10,7 +10,7 @@
 
 @interface MGPCommand ()
 
-@property (nonatomic, strong, readwrite) NSSet *childCommands;
+@property (nonatomic, strong, readwrite) NSMutableSet *childCommands;
 
 @end
 
@@ -26,7 +26,7 @@
     self = [super init];
     if (self)
     {
-        _childCommands = [NSSet set];
+        _childCommands = [NSMutableSet set];
     }
     return self;
 }
@@ -43,7 +43,7 @@
 
 - (void) commandWillStart;
 {
-    __weak id sender = [self sender];
+    id sender = [self sender];
     if ([sender respondsToSelector:@selector(commandWillStart:)])
     {
         [sender commandWillStart:self];
@@ -82,17 +82,21 @@
     {
         if (parentCommand)
         {
-            NSSet *childCommands = [parentCommand.childCommands setByAddingObject:self];
-            parentCommand.childCommands = childCommands;
+            [parentCommand.childCommands addObject:self];
         }
         else
         {
             NSMutableSet *childCommands = [[_parentCommand childCommands] mutableCopy];
             [childCommands removeObject:self];
-            parentCommand.childCommands = [NSSet setWithSet:childCommands];
         }
         _parentCommand = parentCommand;
     }
+}
+
+- (void) removeAllChildCommands;
+{
+    [self.childCommands makeObjectsPerformSelector:@selector(setParentCommand:) withObject:nil];
+    [self.childCommands removeAllObjects];
 }
 
 @end

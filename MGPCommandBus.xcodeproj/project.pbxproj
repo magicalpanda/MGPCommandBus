@@ -601,12 +601,13 @@
 					"$(SRCROOT)/Vendor/PandaKit",
 				);
 				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Tests/Vendor/Expecta",
 					"$(SRCROOT)/Tests/Vendor/Specta",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "MGPCommandBusTests-iOS";
 				SDKROOT = iphoneos;
@@ -654,12 +655,13 @@
 					"$(SRCROOT)/Vendor/PandaKit",
 				);
 				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Tests/Vendor/Expecta",
 					"$(SRCROOT)/Tests/Vendor/Specta",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "MGPCommandBusTests-iOS";
 				SDKROOT = iphoneos;

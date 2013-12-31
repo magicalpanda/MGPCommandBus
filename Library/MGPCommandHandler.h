@@ -32,7 +32,7 @@
  * Inspect the command and report whether this handler can execute
  * the work needed to fulfil the command.
  */
-- (BOOL)canHandleCommand: (id <MGPCommand>)command;
++ (BOOL)canHandleCommand: (id <MGPCommand>)command;
 
 /**
  * Perform this work to satisfy the requested command.

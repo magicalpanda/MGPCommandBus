@@ -56,7 +56,11 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
 
 - (void) registerCommandHandlerClass:(Class)klass;
 {
-    [self registerCommandHandler:[klass new]];
+    NSParameterAssert(klass);
+    Protocol *handlerProtocol = @protocol(MGPCommandHandler);
+    NSAssert([klass conformsToProtocol:handlerProtocol], @"%@ does not comform to protocol '%@'", NSStringFromClass(klass), NSStringFromProtocol(handlerProtocol));
+    
+    [self.handlers addObject:klass];
 }
 
 - (void) registerCommandHandler:(id <MGPCommandHandler>)handler
@@ -64,7 +68,7 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
     NSParameterAssert(handler);
     NSAssert([handler conformsToProtocol:@protocol(MGPCommandHandler)], @"%@ does not comform to protocol '%@'", handler, @"IKBCommandHandler");
     
-    [self.handlers addObject:handler];
+    [self.handlers addObject:[handler class]];
 }
 
 - (void) removeAllCommands;
@@ -77,7 +81,7 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
 {
     __block BOOL canHandleCommand = NO;
     [self.handlers enumerateObjectsUsingBlock:^(id<MGPCommandHandler> handler, BOOL *stop) {
-        canHandleCommand |= [handler canHandleCommand:command];
+        canHandleCommand |= [[handler class] canHandleCommand:command];
     }];
     return canHandleCommand;
 }
@@ -85,7 +89,7 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
 - (NSSet *) handlersForCommand:(id<MGPCommand>)command;
 {
     NSSet *matchingHandlers = [self.handlers objectsPassingTest:^(id<MGPCommandHandler> handler, BOOL *stop){
-        return [handler canHandleCommand:command];
+        return [[handler class] canHandleCommand:command];
     }];
     if ([matchingHandlers count] == 0)
     {
@@ -126,9 +130,10 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
     NSSet *matchingHandlers = [self handlersForCommand:command];
     for (id<MGPCommandHandler> handler in matchingHandlers)
     {
+        id<MGPCommandHandler> handlerInstance = [[[handler class] alloc] init];
         NSOperation *executeOperation = [MGPCommandOperation operationWithBus:self
                                                                       command:command
-                                                                      handler:handler];
+                                                                      handler:handlerInstance];
         [operations addObject:executeOperation];
     }
    

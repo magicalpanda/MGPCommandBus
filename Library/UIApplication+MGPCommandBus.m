@@ -26,10 +26,11 @@ static NSString * const IKBCommandBusKey = @"commandBus";
     if (commandBus == nil)
     {
         commandBus = [MGPCommandBus new];
+        self.commandBus = commandBus;
+        
         id<IKBCommandBusDelegate> delegate = (id)self.delegate;
         id classes = [delegate commandClasses];
         [commandBus registerHandlerClasses:classes];
-        self.commandBus = commandBus;
     }
     return commandBus;
 }

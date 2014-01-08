@@ -62,9 +62,9 @@
 - (void) commandDidFailWithError:(NSError *)error;
 {
     id sender = [self sender];
-    if ([sender respondsToSelector:@selector(commandDidFail:error:)])
+    if ([sender respondsToSelector:@selector(command:didFailWithError:)])
     {
-        [sender commandDidFail:sender error:error];
+        [sender command:self didFailWithError:error];
     }
 }
 

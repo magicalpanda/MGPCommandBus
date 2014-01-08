@@ -56,7 +56,7 @@
 
 - (void) commandWillStart:(id<MGPCommand>)command;
 - (void) commandDidComplete:(id<MGPCommand>)command;
-- (void) commandDidFail:(id<MGPCommand>)command error:(NSError *)error;
+- (void) command:(id<MGPCommand>)command didFailWithError:(NSError *)error;
 
 @end
 

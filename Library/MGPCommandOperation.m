@@ -63,9 +63,9 @@
     }
     else
     {
-        [command commandDidComplete];        
+        [command commandDidComplete];
+        [self.commandBus commandOperationDidComplete:self];
     }
-    [self.commandBus commandOperationDidComplete:self];
 }
 
 @end

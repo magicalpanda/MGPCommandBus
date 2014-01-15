@@ -29,5 +29,6 @@
 
 - (void) commandOperationWillBegin:(MGPCommandOperation *)operation;
 - (void) commandOperationDidComplete:(MGPCommandOperation *)operation;
+- (void) commandOperationDidFail:(MGPCommandOperation *)operation;
 
 @end

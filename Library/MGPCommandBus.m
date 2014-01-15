@@ -106,6 +106,14 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
     }
 }
 
+- (void) commandOperationDidFail:(MGPCommandOperation *)operation;
+{
+    @synchronized(self)
+    {
+        [self.workingCommands removeObject:operation.command];
+    }
+}
+
 - (void) commandOperationDidComplete:(MGPCommandOperation *)operation;
 {
     id<MGPCommand> parentCommand = [operation command];

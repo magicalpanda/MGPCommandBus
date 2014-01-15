@@ -60,6 +60,7 @@
     {
         NSLog(@"!!! Command %@ failed %@", command, error);
         [command commandDidFailWithError:error];
+        [self.commandBus commandOperationDidFail:self];
     }
     else
     {

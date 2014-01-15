@@ -1,17 +1,18 @@
 //
-//  UIApplication+GibraltarAdditions.h
-//  Gibraltar iOS
+//  NSApplication+CommandBusAdditions.h
+//  MGPCommandBus
 //
-//  Created by Saul Mora on 12/9/13.
-//  Copyright (c) 2013 Magical Panda. All rights reserved.
+//  Created by Saul Mora on 1/12/14.
+//
 //
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
+
 #import "MGPCommandBus.h"
 
 @protocol MGPCommand;
 
-@interface UIApplication (MGPCommandBusAdditions)
+@interface NSApplication (MGPCommandBusAdditions)
 
 @property (nonatomic, retain, readonly) MGPCommandBus *commandBus;
 
@@ -25,7 +26,7 @@
 @end
 
 
-@protocol MGPCommandBusDelegate <UIApplicationDelegate>
+@protocol MGPCommandBusDelegate
 
 - (id<NSFastEnumeration>) commandClasses;
 

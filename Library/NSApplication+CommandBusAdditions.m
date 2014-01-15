@@ -1,19 +1,20 @@
 //
-//  UIApplication+GibraltarAdditions.m
-//  Gibraltar iOS
+//  NSApplication+CommandBusAdditions.m
+//  MGPCommandBus
 //
-//  Created by Saul Mora on 12/9/13.
-//  Copyright (c) 2013 Magical Panda. All rights reserved.
+//  Created by Saul Mora on 1/12/14.
+//
 //
 
-#import "UIApplication+MGPCommandBus.h"
+#import "NSApplication+CommandBusAdditions.h"
+
 #import "MGPCommand.h"
 #import "MGPCommandBus.h"
 #import <objc/runtime.h>
 
 static NSString * const IKBCommandBusKey = @"commandBus";
 
-@implementation UIApplication (MGPCommandBusAdditions)
+@implementation NSApplication (MGPCommandBusAdditions)
 
 - (void)setCommandBus:(MGPCommandBus *)commandBus;
 {
@@ -27,7 +28,7 @@ static NSString * const IKBCommandBusKey = @"commandBus";
     {
         commandBus = [MGPCommandBus new];
         self.commandBus = commandBus;
-        
+
         id<MGPCommandBusDelegate> delegate = (id)self.delegate;
         id classes = [delegate commandClasses];
         [commandBus registerHandlerClasses:classes];

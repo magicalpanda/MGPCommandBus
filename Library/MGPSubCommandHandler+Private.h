@@ -1,6 +1,5 @@
 //
-//  GBRMultiCommandHandler+Private.h
-//  Gibraltar iOS
+//  MGPSubCommandHandler+Private.h
 //
 //  Created by Saul Mora on 1/1/14.
 //  Copyright (c) 2014 Magical Panda. All rights reserved.

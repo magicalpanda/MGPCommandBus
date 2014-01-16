@@ -1,6 +1,5 @@
 //
-//  GBRRenderer.m
-//  Gibraltar iOS
+//  MGPSubCommandHandler.m
 //
 //  Created by Saul Mora on 12/11/13.
 //  Copyright (c) 2013 Magical Panda. All rights reserved.
@@ -8,17 +7,17 @@
 
 #import "MGPSubCommandHandler+Private.h"
 
-#ifdef TARGET_OS_IPHONE
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
 #import "UIApplication+MGPCommandBus.h"
-#elif defined(TARGET_OS_MAC)
-#import "NSApplication+CommandBusAdditions.h"
+#elif TARGET_OS_MAC
+#import "NSApplication+MGPCommandBus.h"
 #endif
 
 id mgp_shared_application(void)
 {
-#ifdef TARGET_OS_IPHONE
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE
     return [UIApplication sharedApplication];
-#else
+#elif TARGET_OS_MAC
     return [NSApplication sharedApplication];
 #endif
 }

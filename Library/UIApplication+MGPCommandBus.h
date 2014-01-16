@@ -1,6 +1,5 @@
 //
-//  UIApplication+GibraltarAdditions.h
-//  Gibraltar iOS
+//  UIApplication+MGPCommandBus.h
 //
 //  Created by Saul Mora on 12/9/13.
 //  Copyright (c) 2013 Magical Panda. All rights reserved.

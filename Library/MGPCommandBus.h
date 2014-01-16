@@ -21,6 +21,7 @@
 #import <Foundation/Foundation.h>
 #import "MGPCommand.h"
 #import "MGPCommandHandler.h"
+#import "MGPSubCommandHandler.h"
 
 /**
  * The command bus accepts commands from the application and schedules work

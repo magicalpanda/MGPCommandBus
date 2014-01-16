@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		C7101D29186F7129006AC00B /* MGPCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D28186F7129006AC00B /* MGPCommandSpec.m */; };
 		C7101D2B186F716F006AC00B /* MGPCommandHandlerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D2A186F716F006AC00B /* MGPCommandHandlerSpec.m */; };
-		C71A3FAF188846A60034C838 /* MGPSubCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C71A3FAC188846A60034C838 /* MGPSubCommandHandler.h */; };
+		C71A3FAF188846A60034C838 /* MGPSubCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C71A3FAC188846A60034C838 /* MGPSubCommandHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C71A3FB0188846A60034C838 /* MGPSubCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C71A3FAD188846A60034C838 /* MGPSubCommandHandler.m */; };
 		C71A3FB1188846A60034C838 /* MGPSubCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C71A3FAD188846A60034C838 /* MGPSubCommandHandler.m */; };
-		C71A3FB2188846A60034C838 /* MGPSubCommandHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C71A3FAE188846A60034C838 /* MGPSubCommandHandler+Private.h */; };
+		C71A3FB2188846A60034C838 /* MGPSubCommandHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C71A3FAE188846A60034C838 /* MGPSubCommandHandler+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C71A3FCC188853680034C838 /* MGPCommand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D85BB5186F5D14007C36C3 /* MGPCommand+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C71A3FCD1888536C0034C838 /* MGPCommandBus+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C76B93C717C5857800624CFD /* MGPCommandBus+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C73DA4C7186F8A3D00F731C7 /* MGPCommandBusHandlersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */; };
 		C73DA4EF1870ACA500F731C7 /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC41186F810B00AB1D4B /* TestHelpers.m */; };
 		C791BE79186F41D0005453E6 /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C791BE5F186F41D0005453E6 /* libExpecta-ios-universal.a */; };
@@ -25,8 +27,8 @@
 		C7C6815F1883B788006D4711 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */; };
 		C7C681601883B788006D4711 /* MGPCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */; };
 		C7C681611883B788006D4711 /* MGPCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B93C917C5857800624CFD /* MGPCommandBus.m */; };
-		C7C681651883B894006D4711 /* NSApplication+CommandBusAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C681631883B841006D4711 /* NSApplication+CommandBusAdditions.m */; };
-		C7C681661883B8A7006D4711 /* NSApplication+CommandBusAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C681621883B841006D4711 /* NSApplication+CommandBusAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7C681651883B894006D4711 /* NSApplication+MGPCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C681631883B841006D4711 /* NSApplication+MGPCommandBus.m */; };
+		C7C681661883B8A7006D4711 /* NSApplication+MGPCommandBus.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C681621883B841006D4711 /* NSApplication+MGPCommandBus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7C6816D1883BA28006D4711 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C681341883B6D3006D4711 /* Cocoa.framework */; };
 		C7D85BB4186F5CB7007C36C3 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */; };
 		C7F5450E18666F42000A7BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93D717C5858E00624CFD /* Foundation.framework */; };
@@ -152,8 +154,8 @@
 		C7C681371883B6D3006D4711 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C7C681381883B6D3006D4711 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C7C681391883B6D3006D4711 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		C7C681621883B841006D4711 /* NSApplication+CommandBusAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+CommandBusAdditions.h"; sourceTree = "<group>"; };
-		C7C681631883B841006D4711 /* NSApplication+CommandBusAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+CommandBusAdditions.m"; sourceTree = "<group>"; };
+		C7C681621883B841006D4711 /* NSApplication+MGPCommandBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+MGPCommandBus.h"; sourceTree = "<group>"; };
+		C7C681631883B841006D4711 /* NSApplication+MGPCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MGPCommandBus.m"; sourceTree = "<group>"; };
 		C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommand.m; sourceTree = "<group>"; };
 		C7D85BB5186F5D14007C36C3 /* MGPCommand+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGPCommand+Private.h"; sourceTree = "<group>"; };
 		C7F5450D18666F42000A7BB5 /* libMGPCommandBus-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMGPCommandBus-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,8 +209,8 @@
 		C76B93C517C5857800624CFD /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				C7C681621883B841006D4711 /* NSApplication+CommandBusAdditions.h */,
-				C7C681631883B841006D4711 /* NSApplication+CommandBusAdditions.m */,
+				C7C681621883B841006D4711 /* NSApplication+MGPCommandBus.h */,
+				C7C681631883B841006D4711 /* NSApplication+MGPCommandBus.m */,
 				C79860821866650300D9617B /* UIApplication+MGPCommandBus.h */,
 				C79860831866650300D9617B /* UIApplication+MGPCommandBus.m */,
 				C76B93C617C5857800624CFD /* MGPCommand.h */,
@@ -383,12 +385,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C71A3FB2188846A60034C838 /* MGPSubCommandHandler+Private.h in Headers */,
-				C7C681661883B8A7006D4711 /* NSApplication+CommandBusAdditions.h in Headers */,
+				C7C681661883B8A7006D4711 /* NSApplication+MGPCommandBus.h in Headers */,
 				C7C6815C1883B77B006D4711 /* MGPCommand.h in Headers */,
 				C71A3FAF188846A60034C838 /* MGPSubCommandHandler.h in Headers */,
+				C71A3FB2188846A60034C838 /* MGPSubCommandHandler+Private.h in Headers */,
 				C7C6815D1883B77B006D4711 /* MGPCommandBus.h in Headers */,
 				C7C6815E1883B77B006D4711 /* MGPCommandHandler.h in Headers */,
+				C71A3FCC188853680034C838 /* MGPCommand+Private.h in Headers */,
+				C71A3FCD1888536C0034C838 /* MGPCommandBus+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +509,7 @@
 				C7C6815F1883B788006D4711 /* MGPCommand.m in Sources */,
 				C7C681601883B788006D4711 /* MGPCommandOperation.m in Sources */,
 				C71A3FB1188846A60034C838 /* MGPSubCommandHandler.m in Sources */,
-				C7C681651883B894006D4711 /* NSApplication+CommandBusAdditions.m in Sources */,
+				C7C681651883B894006D4711 /* NSApplication+MGPCommandBus.m in Sources */,
 				C7C681611883B788006D4711 /* MGPCommandBus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

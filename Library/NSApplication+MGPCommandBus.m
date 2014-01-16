@@ -6,7 +6,7 @@
 //
 //
 
-#import "NSApplication+CommandBusAdditions.h"
+#import "NSApplication+MGPCommandBus.h"
 
 #import "MGPCommand.h"
 #import "MGPCommandBus.h"

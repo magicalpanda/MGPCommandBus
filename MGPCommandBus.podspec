@@ -21,7 +21,7 @@ LICENSE
  s.author = 'Saul Mora' 
  s.ios.deployment_target = '6.0'
  s.osx.deployment_target = '10.6'
- s.source = { :git => "https://github.com/obviousmatter/MGPCommandBus.git", :head}
+ s.source = { :git => "https://github.com/obviousmatter/MGPCommandBus.git", :branch => "master"}
  s.source_files = 'Library/*.h', 'Library/*.{h,c,m,cpp}'
  s.public_header_files = 'include/MGPCommandBus.h'
  s.xcconfig = {"HEADER_SEARCH_PATHS" => '"${PODS_ROOT}/MGPCommandBus/Library/"'}

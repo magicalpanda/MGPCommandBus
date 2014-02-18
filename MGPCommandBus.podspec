@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
  s.name = "MGPCommandBus"
- s.version = 1.0
+ s.version = "1.0"
  s.summary = "The Command Bus motivations are simply to provide a way to decouple your visual aspects of apps from all the background processing. When you send a command to the bus, it will run asynchronously until completion, or failure. The command pattern helps provide a place for all logic for simple points of execution of services for your app."
 
  s.homepage = "https://github.com/obviousmatter/MGPCommandBus" 
@@ -22,9 +22,9 @@ LICENSE
  s.author = 'Saul Mora' 
  s.ios.deployment_target = '6.0'
  s.osx.deployment_target = '10.6'
- s.requires_arc = true
  s.source = { :git => "https://github.com/obviousmatter/MGPCommandBus.git", :branch => "master"}
  s.source_files = 'Library/*.h', 'Library/*.{h,c,m,cpp}'
+ s.requires_arc = true
  s.public_header_files = 'include/MGPCommandBus.h'
  s.xcconfig = {"HEADER_SEARCH_PATHS" => '"${PODS_ROOT}/MGPCommandBus/Library/"'}
 end

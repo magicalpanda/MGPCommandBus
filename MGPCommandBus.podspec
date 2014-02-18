@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
- s.name = 'MGPCommandBus'
+ s.name = 'MGPCommandBus (1.0)'
  s.version = '1.0'
  s.summary = 'The Command Bus motivations are simply to provide a way to decouple your visual aspects of apps from all the background processing. When you send a command to the bus, it will run asynchronously until completion, or failure. The command pattern helps provide a place for all logic for simple points of execution of services for your app.'
  s.homepage = 'https://github.com/obviousmatter/MGPCommandBus'

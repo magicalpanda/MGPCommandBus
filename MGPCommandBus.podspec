@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
  s.name = 'MGPCommandBus'
- s.version = '0.0.1'
+ s.version = '0.0.2'
  s.summary = 'The Command Bus motivations are simply to provide a way to decouple your visual aspects of apps from all the background processing.'
  s.homepage = 'https://github.com/obviousmatter/MGPCommandBus'
  s.license = {:type => 'MIT', :text => <<-LICENSE 
@@ -21,7 +21,7 @@ LICENSE
  s.author = { 'Saul Mora' => 'saul@magicalpanda.com' } 
  s.ios.deployment_target = '6.0'
  s.osx.deployment_target = '10.8'
- s.source = { :git => 'https://github.com/obviousmatter/MGPCommandBus.git', :tag => '0.0.1'}
+ s.source = { :git => 'https://github.com/obviousmatter/MGPCommandBus.git', :tag => '0.0.2'}
  s.source_files = 'Library/*.h', 'Library/*.{h,c,m,cpp}'
  s.requires_arc = true
  s.public_header_files = 'include/MGPCommandBus.h'

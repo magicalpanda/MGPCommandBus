@@ -6,6 +6,8 @@
 //
 //
 
+#if defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
+
 #import "NSApplication+MGPCommandBus.h"
 
 #import "MGPCommand.h"
@@ -64,3 +66,5 @@ static NSString * const IKBCommandBusKey = @"commandBus";
 }
 
 @end
+
+#endif

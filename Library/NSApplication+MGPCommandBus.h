@@ -6,6 +6,8 @@
 //
 //
 
+#if defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
+
 #import <Cocoa/Cocoa.h>
 
 #import "MGPCommandBus.h"
@@ -31,3 +33,5 @@
 - (id<NSFastEnumeration>) commandClasses;
 
 @end
+
+#end if

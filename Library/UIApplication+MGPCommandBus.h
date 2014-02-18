@@ -5,6 +5,8 @@
 //  Copyright (c) 2013 Magical Panda. All rights reserved.
 //
 
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+
 #import <UIKit/UIKit.h>
 #import "MGPCommandBus.h"
 
@@ -29,3 +31,5 @@
 - (id<NSFastEnumeration>) commandClasses;
 
 @end
+
+#endif

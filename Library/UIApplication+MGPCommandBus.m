@@ -5,6 +5,8 @@
 //  Copyright (c) 2013 Magical Panda. All rights reserved.
 //
 
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+
 #import "UIApplication+MGPCommandBus.h"
 #import "MGPCommand.h"
 #import "MGPCommandBus.h"
@@ -62,3 +64,5 @@ static NSString * const IKBCommandBusKey = @"commandBus";
 }
 
 @end
+
+#endif

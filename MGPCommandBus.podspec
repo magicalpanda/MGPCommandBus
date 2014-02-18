@@ -1,10 +1,9 @@
 Pod::Spec.new do |s|
 
- s.name = "MGPCommandBus"
- s.version = "1.0"
- s.summary = "The Command Bus motivations are simply to provide a way to decouple your visual aspects of apps from all the background processing. When you send a command to the bus, it will run asynchronously until completion, or failure. The command pattern helps provide a place for all logic for simple points of execution of services for your app."
-
- s.homepage = "https://github.com/obviousmatter/MGPCommandBus" 
+ s.name = 'MGPCommandBus'
+ s.version = '1.0'
+ s.summary = 'The Command Bus motivations are simply to provide a way to decouple your visual aspects of apps from all the background processing. When you send a command to the bus, it will run asynchronously until completion, or failure. The command pattern helps provide a place for all logic for simple points of execution of services for your app.'
+ s.homepage = 'https://github.com/obviousmatter/MGPCommandBus'
  s.license = {:type => 'MIT', :text => <<-LICENSE 
    The MIT License (MIT)
    
@@ -19,10 +18,10 @@ Pod::Spec.new do |s|
 LICENSE
 }
 
- s.author = 'Saul Mora' 
+ s.author = { 'Saul Mora' => 'saul@magicalpanda.com' } 
  s.ios.deployment_target = '6.0'
  s.osx.deployment_target = '10.6'
- s.source = { :git => "https://github.com/obviousmatter/MGPCommandBus.git", :branch => "master"}
+ s.source = { :git => 'https://github.com/obviousmatter/MGPCommandBus.git', :branch => 'master'}
  s.source_files = 'Library/*.h', 'Library/*.{h,c,m,cpp}'
  s.requires_arc = true
  s.public_header_files = 'include/MGPCommandBus.h'

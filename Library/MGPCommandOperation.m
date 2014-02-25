@@ -62,6 +62,11 @@
         [command commandDidFailWithError:error];
         [self.commandBus commandOperationDidFail:self];
     }
+    else
+    {
+        [command commandDidComplete];
+        [self.commandBus commandOperationDidComplete:self];
+    }
 }
 
 @end

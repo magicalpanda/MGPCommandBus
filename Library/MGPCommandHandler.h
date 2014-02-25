@@ -40,6 +40,8 @@
  *       don't make any assumptions about the thread or queue it's running in.
  *       Particularly, be aware that this method could be called concurrently
  *       on different threads.
+ *       The handler should call [command commandDidComplete] or [command commandDidFailWithError] 
+ *       sometime during that execution to close the command.
  @parameter error an error that occured during operation
  @return BOOL indicate command succeeded or failed
 

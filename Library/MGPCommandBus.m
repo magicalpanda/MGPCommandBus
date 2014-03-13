@@ -121,15 +121,6 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
     {
         [self.workingCommands removeObject:parentCommand];
     }
-    
-    NSSet *childCommands = [[parentCommand childCommands] copy];
-    [parentCommand removeAllChildCommands];
-    
-    for (id<MGPCommand> childCommand in childCommands)
-    {
-        [self.waitingCommands removeObject:childCommand];
-        [self execute:childCommand];
-    }
 }
 
 - (NSSet *) operationsForCommand:(id<MGPCommand>)command;
@@ -154,19 +145,34 @@ void MGPCommandBusZeroHandlers(id <MGPCommand> command)
     NSMutableSet *waitingCommands = self.waitingCommands;
     if ([command parentCommand])
     {
-        [waitingCommands addObject:command];
+        [waitingCommands removeObject:command];
     }
     
-    if (![waitingCommands containsObject:command] && ![self.workingCommands containsObject:command])
+    if ([command.childCommands count]> 0)
     {
-        [waitingCommands unionSet:[command childCommands]];
-
-        NSSet *operations = [self operationsForCommand:command];
-        [self.queue addOperations:[operations allObjects] waitUntilFinished:NO];
-
-        commandWasHandled = [operations count] > 0;
+        [waitingCommands unionSet:[NSSet setWithArray:[command childCommands]]];
     }
+
+    NSSet *operations = [self operationsForCommand:command];
+    [self setDependenciesForOperations:operations];
+    [self.queue addOperations:[operations allObjects] waitUntilFinished:NO];
+
+    commandWasHandled = [operations count] > 0;
+    
     return commandWasHandled;
+}
+
+- (void) setDependenciesForOperations:(NSSet *)operations
+{
+    for (MGPCommandOperation *operation in operations) {
+        if (operation.command.dependentCommand) {
+            NSMutableSet *dependentOperations = [NSMutableSet setWithArray:self.queue.operations];
+            [dependentOperations filterUsingPredicate:[NSPredicate predicateWithFormat:@"command == %@", operation.command.dependentCommand]];
+            [dependentOperations enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+                [operation addDependency:obj];
+            }];
+        }
+    }
 }
 
 - (BOOL) execute:(id<MGPCommand>)priorCommand before:(id<MGPCommand>)laterCommand;

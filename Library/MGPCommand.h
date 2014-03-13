@@ -30,10 +30,11 @@
  */
 @protocol MGPCommand <NSObject, NSCoding>
 
-@property (weak, readwrite) id sender;
+@property (strong, readwrite) id sender;
 
-@property (weak) id<MGPCommand> parentCommand;
-@property (strong, readonly) NSSet *childCommands;
+@property (strong) id<MGPCommand> parentCommand;
+@property (strong, readonly) NSArray *childCommands;
+@property (strong, readwrite) id <MGPCommand> dependentCommand;
 
 - (void) commandWillStart;
 - (void) commandDidComplete;
@@ -63,8 +64,8 @@
 @interface MGPCommand : NSObject<MGPCommand>
 
 @property (copy, readonly) NSError *error;
-@property (assign, readwrite) id<MGPCommand> parentCommand;
-
+@property (strong, readwrite) id<MGPCommand> parentCommand;
+@property (strong, readwrite) id <MGPCommand> dependentCommand;
 @end
 
 //

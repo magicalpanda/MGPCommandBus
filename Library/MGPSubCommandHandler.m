@@ -41,7 +41,7 @@ id mgp_shared_application(void)
     {
         _childCommandsLock = dispatch_semaphore_create(0);
         _completedCommands = [NSMutableSet set];        
-        _completionSyncQueue = dispatch_queue_create("com.magicalpanda.gibraltar.commandQueue", DISPATCH_QUEUE_SERIAL);
+        _completionSyncQueue = dispatch_queue_create("com.magicalpanda.commandQueue", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
@@ -58,7 +58,7 @@ id mgp_shared_application(void)
     return NO;
 }
 
-- (BOOL) sendSubCommands:(NSSet *)subCommands;
+- (BOOL) sendSubCommands:(NSArray *)subCommands;
 {
     if ([subCommands count] == 0)
     {
@@ -70,7 +70,7 @@ id mgp_shared_application(void)
         id sharedApplication = mgp_shared_application();
         [sharedApplication sendCommands:subCommands from:self];
         
-        self.sentCommands = [subCommands mutableCopy];
+        self.sentCommands = [NSSet setWithArray:subCommands];
     });
     return YES;
 }

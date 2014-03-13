@@ -10,8 +10,7 @@
 
 @interface MGPCommand ()
 
-@property (nonatomic, strong, readwrite) NSMutableSet *childCommands;
-
+@property (nonatomic, strong, readwrite) NSMutableArray *childCommands;
 @end
 
 
@@ -20,13 +19,15 @@
 @synthesize sender = _sender;
 @synthesize parentCommand = _parentCommand;
 @synthesize childCommands = _childCommands;
+@synthesize dependentCommand = _dependentCommand;
+
 
 - (instancetype) init;
 {
     self = [super init];
     if (self)
     {
-        _childCommands = [NSMutableSet set];
+        _childCommands = [NSMutableArray array];
     }
     return self;
 }
@@ -86,7 +87,7 @@
         }
         else
         {
-            NSMutableSet *childCommands = [[_parentCommand childCommands] mutableCopy];
+            NSMutableArray *childCommands = [[_parentCommand childCommands] mutableCopy];
             [childCommands removeObject:self];
         }
         _parentCommand = parentCommand;

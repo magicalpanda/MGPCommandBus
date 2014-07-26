@@ -14,31 +14,34 @@
 #import "MGPCommandBus.h"
 #import <objc/runtime.h>
 
-static NSString * const IKBCommandBusKey = @"commandBus";
+static NSString * const MGPCommandBusKey = @"commandBus";
 
 @implementation NSApplication (MGPCommandBusAdditions)
 
 - (void)setCommandBus:(MGPCommandBus *)commandBus;
 {
-    objc_setAssociatedObject(self, (__bridge const void *)(IKBCommandBusKey), commandBus, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, (__bridge const void *)(MGPCommandBusKey), commandBus, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (MGPCommandBus *)commandBus;
 {
-    id commandBus = objc_getAssociatedObject(self, (__bridge const void *)(IKBCommandBusKey));
+    id commandBus = objc_getAssociatedObject(self, (__bridge const void *)(MGPCommandBusKey));
     if (commandBus == nil)
     {
         commandBus = [MGPCommandBus new];
         self.commandBus = commandBus;
 
         id<MGPCommandBusDelegate> delegate = (id)self.delegate;
-        id classes = [delegate commandClasses];
-        [commandBus registerHandlerClasses:classes];
+        if ([delegate respondsToSelector:@selector(commandHandlers)])
+        {
+            id<NSFastEnumeration> handlers = [delegate commandHandlers];
+            [commandBus registerCommandHandlers:handlers];
+        }
     }
     return commandBus;
 }
 
-- (void) sendCommands:(id<NSFastEnumeration>)commands from:(id)sender;
+- (void) sendCommands:(id<NSFastEnumeration>)commands from:(id<MGPCommandCallback>)sender;
 {
     for (id<MGPCommand> command in commands)
     {

@@ -23,6 +23,12 @@
 #import "MGPCommandHandler.h"
 #import "MGPSubCommandHandler.h"
 
+#if defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
+#import "NSApplication+MGPCommandBus.h"
+#else
+#import "UIApplication+MGPCommandBus.h"
+#endif
+
 /**
  * The command bus accepts commands from the application and schedules work
  * to fulfil those commands.
@@ -31,12 +37,12 @@
 
 ///**
 // * A convenience method to get a shared bus everywhere in your app. While
-// * IKBCommandBus is not a singleton, you need to register handlers and
+// * MGPCommandBus is not a singleton, you need to register handlers and
 // * submit commands to the same bus which can be arranged via this method.
 // */
 //+ (instancetype)applicationCommandBus;
 
-- (void) removeAllCommands;
+- (void) cancelAllCommands;
 
 /**
  Check if a command as configured can be executed. Useful for determining if
@@ -45,7 +51,7 @@
 - (BOOL) commandCanExecute:(id<MGPCommand>)command;
 
 /**
- * Request a command be performed. The command should conform to IKBCommand,
+ * Request a command be performed. The command should conform to MGPCommand,
  * and additionally specify any additional data needed. As an example, a
  * contacts app might have an "add person" command which carries a name,
  * phone number, email address and so on.
@@ -55,15 +61,15 @@
 - (BOOL) execute:(id<MGPCommand>)command;
 
 - (BOOL) execute:(id<MGPCommand>)priorCommand before:(id<MGPCommand>)laterCommand;
-- (BOOL) execute:(id<MGPCommand>)laterCommand after:(id<MGPCommand>)priodCommand;
+- (BOOL) execute:(id<MGPCommand>)laterCommand after:(id<MGPCommand>)priorCommand;
 
 /**
  * Add a handler object to the command bus.
  */
-- (void) registerCommandHandler: (id<MGPCommandHandler>)handler;
+- (void) registerCommandHandler:(id<MGPCommandHandler>)handler;
+- (void) registerCommandHandlers:(id<NSFastEnumeration>)handlers;
 
-- (void) registerHandlerClasses:(id<NSFastEnumeration>)classes;
-
-- (void) registerCommandHandlerClass:(Class)klass;
+//- (void) registerHandlerClasses:(id<NSFastEnumeration>)classes;
+//- (void) registerCommandHandlerClass:(Class)klass;
 
 @end

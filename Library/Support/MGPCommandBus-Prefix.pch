@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'IKBCommandBus' target in the 'IKBCommandBus' project
+// Prefix header for all source files of the 'MGPCommandBus' target in the 'MGPCommandBus' project
 //
 
 #ifdef __OBJC__

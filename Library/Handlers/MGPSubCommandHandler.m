@@ -41,12 +41,12 @@ id mgp_shared_application(void)
     {
         _childCommandsLock = dispatch_semaphore_create(0);
         _completedCommands = [NSMutableSet set];        
-        _completionSyncQueue = dispatch_queue_create("com.magicalpanda.commandQueue", DISPATCH_QUEUE_SERIAL);
+        _completionSyncQueue = dispatch_queue_create("com.magicalpanda.commandBus.commandQueue", DISPATCH_QUEUE_SERIAL);
     }
     return self;
 }
 
-+ (BOOL)canHandleCommand:(id<MGPCommand>)command;
+- (BOOL)canHandleCommand:(id<MGPCommand>)command;
 {
     NSAssert(NO, @"%@ must be implemented in a subclass of %@", NSStringFromSelector(_cmd), NSStringFromClass([self class]));
     return NO;

@@ -20,7 +20,7 @@
 - (void) commandHandlerDidComplete;
 - (void) commandHandlerDidFail:(NSError *)error;
 
-/// When you implement `executeCommand:error:` you should al some point call `[self sendSubCommands:command.childCommands]`
+/// When you implement `executeCommand:error:` you should at some point call `[self sendSubCommands:command.childCommands]`
 /// to execute the child methods.
 /// Optionally you can call `[self waitForSubCommandsToComplete]` to wait for the completion of the child commands
 

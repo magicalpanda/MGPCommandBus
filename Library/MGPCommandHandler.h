@@ -32,7 +32,16 @@
  * Inspect the command and report whether this handler can execute
  * the work needed to fulfil the command.
  */
-+ (BOOL)canHandleCommand: (id <MGPCommand>)command;
+- (BOOL) canHandleCommand:(id<MGPCommand>)command;
+
+///**
+// Used to tell the bus that you want to handle the threading more manually. Will launch your command using an async command operation, and will use the execute:completion: method on the handler
+// */
+//- (BOOL) isAsynchronous;
+
+@end
+
+@protocol MGPSynchronousCommandHandler <MGPCommandHandler>
 
 /**
  * Perform this work to satisfy the requested command.
@@ -44,6 +53,17 @@
  @return BOOL indicate command succeeded or failed
 
  */
-- (BOOL) executeCommand: (id <MGPCommand>)command error:(NSError **)error;
+- (BOOL) executeCommand:(id<MGPCommand>)command error:(NSError **)error;
+
+@end
+
+@protocol MGPAsynchronousCommandHandler <MGPCommandHandler>
+
+/**
+ Perform the work to satisfy the command
+ @note this method is expected to execute asynchronously and should not block on completion.
+ You MUST fire the completion block in order for the command to complete.
+ */
+- (void) executeCommand:(id<MGPCommand>)command completion:(void (^)(BOOL,NSError *))completion;
 
 @end

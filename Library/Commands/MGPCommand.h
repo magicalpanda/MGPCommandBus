@@ -30,15 +30,18 @@
  */
 @protocol MGPCommand <NSObject, NSCoding>
 
-@property (strong, readwrite) id sender;
+/** The object from where the command was send. The sender will typicall receive callbacks when the command is complete, or has failed. 
+ */
+@property (weak, readwrite) id sender;
 
-@property (strong) id<MGPCommand> parentCommand;
-@property (strong, readonly) NSArray *childCommands;
-@property (strong, readwrite) id <MGPCommand> dependentCommand;
+/** Command that must be run prior to the current command. The command bus will not execute any commands dependent on a failed command. If the command fails, the command will not be run.
+ */
+@property (weak, readwrite) id<MGPCommand> priorCommand;
 
 - (void) commandWillStart;
 - (void) commandDidComplete;
 - (void) commandDidFailWithError:(NSError *)error;
+- (void) commandDidNotStart;
 
 - (void) removeAllChildCommands;
 
@@ -49,14 +52,29 @@
  */
 @property (nonatomic, readonly) NSUUID *identifier;
 
+/**
+ Gives the command a chance to validate or perform any sanity checks prior to actually running on the bus and handed off to a handler
+ */
+- (BOOL) shouldExecute;
+
 @end
 
 @protocol MGPCommandCallback <NSObject>
 
 @optional
 
+/** Sent when a command was unable to be run on the command bus. Most likely, the prior command failed.
+ */
+- (void) commandDidNotStart:(id<MGPCommand>)command;
+
+/** Sent when a command is on the bus and will begin execution. This may be called from any queue/thread.
+ */
 - (void) commandWillStart:(id<MGPCommand>)command;
+/** Sent when a command has completed its task. This may be called from any queue/thread.
+ */
 - (void) commandDidComplete:(id<MGPCommand>)command;
+/** Sent when command failed during execution. This may be called from any queue/thread.
+ */
 - (void) command:(id<MGPCommand>)command didFailWithError:(NSError *)error;
 
 @end
@@ -64,13 +82,5 @@
 @interface MGPCommand : NSObject<MGPCommand>
 
 @property (copy, readonly) NSError *error;
-@property (strong, readwrite) id<MGPCommand> parentCommand;
-@property (strong, readwrite) id <MGPCommand> dependentCommand;
-@end
 
-//
-//@interface IKBCommand ()
-//
-//@property (nonatomic, assign, readwrite) IKBCommandBus *commandBus;
-//
-//@end
+@end

@@ -6,12 +6,13 @@
 //
 //
 
-#if defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
+//#if defined(__MAC_OS_X_VERSION_MIN_REQUIRED)
 
 #import <Cocoa/Cocoa.h>
 
 #import "MGPCommandBus.h"
 
+@class MGPCommandBus;
 @protocol MGPCommand;
 
 @interface NSApplication (MGPCommandBusAdditions)
@@ -28,10 +29,10 @@
 @end
 
 
-@protocol MGPCommandBusDelegate
-
-- (id<NSFastEnumeration>) commandClasses;
+@protocol MGPCommandBusDelegate<NSObject>
+@optional
+- (id<NSFastEnumeration>) commandHandlers;
 
 @end
 
-#endif
+//#endif

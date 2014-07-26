@@ -12,8 +12,8 @@
 
 @interface MGPSubCommandHandler ()<MGPCommandCallback>
 
-
 - (void) commandHandlerDidCompleteCommand:(id<MGPCommand>)command progress:(float)progress;
 - (void) commandHandlerDidComplete;
 - (void) commandHandlerDidFail:(NSError *)error;
+
 @end

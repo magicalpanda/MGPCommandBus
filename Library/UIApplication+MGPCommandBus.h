@@ -5,11 +5,11 @@
 //  Copyright (c) 2013 Magical Panda. All rights reserved.
 //
 
-#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED)
+//#if TARGET_OS_IPHONE || TARGET_IOS_SIMULATOR
 
 #import <UIKit/UIKit.h>
-#import "MGPCommandBus.h"
 
+@class MGPCommandBus;
 @protocol MGPCommand;
 
 @interface UIApplication (MGPCommandBusAdditions)
@@ -28,8 +28,9 @@
 
 @protocol MGPCommandBusDelegate <UIApplicationDelegate>
 
-- (id<NSFastEnumeration>) commandClasses;
+@optional
+- (id<NSFastEnumeration>) commandHandlers;
 
 @end
 
-#endif
+//#endif

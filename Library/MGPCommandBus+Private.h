@@ -28,6 +28,7 @@
 @property (nonatomic, strong, readonly) NSMutableSet *handlers;
 
 - (void) commandOperationWillBegin:(MGPCommandOperation *)operation;
+- (void) commandOperationDidNotStart:(MGPCommandOperation *)operation;
 - (void) commandOperationDidComplete:(MGPCommandOperation *)operation;
 - (void) commandOperationDidFail:(MGPCommandOperation *)operation;
 

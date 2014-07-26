@@ -7,18 +7,16 @@
 //
 
 #import "MGPCommandOperation.h"
-#import "MGPCommand+Private.h"
-#import "MGPCommandBus+Private.h"
-
+#import "MGPSynchronousCommandOperation.h"
+#import "MGPAsynchronousCommandOperation.h"
 
 @interface MGPCommandOperation ()
 
 @property (nonatomic, strong, readwrite) id<MGPCommand> command;
-@property (nonatomic, strong, readwrite) id<MGPCommandHandler> handler;
+@property (nonatomic, strong, readwrite) id handler;
 @property (nonatomic, weak, readwrite) MGPCommandBus *commandBus;
 
 @end
-
 
 @implementation MGPCommandOperation
 
@@ -30,43 +28,25 @@
 - (instancetype) initWithBus:(MGPCommandBus *)bus command:(id<MGPCommand>)command handler:(id<MGPCommandHandler>)handler;
 {
     NSParameterAssert(bus);
-    NSParameterAssert(command);
     NSParameterAssert(handler);
-    
-    self = [super init];
+    NSParameterAssert(command);
+
+    BOOL useAsynchronousOperation = [handler conformsToProtocol:@protocol(MGPAsynchronousCommandHandler)];
+    Class operationClass = useAsynchronousOperation ? [MGPAsynchronousCommandOperation class] : [MGPSynchronousCommandOperation class];
+
+    self = [[operationClass alloc] init];
     if (self)
     {
         _commandBus = bus;
-        _command = command;
         _handler = handler;
+        _command = command;
     }
     return self;
 }
 
-- (void)main;
+- (NSString *) description;
 {
-    id<MGPCommand> command = self.command;
-    id<MGPCommandHandler> handler = self.handler;
-    
-    NSAssert(command, @"No command to execute");
-    NSAssert(handler, @"No handler to execute command");
-    [self.commandBus commandOperationWillBegin:self];
-    
-    [command commandWillStart];
-    
-    NSError *error = nil;
-    BOOL succeeded = [handler executeCommand:command error:&error];
-    if (!succeeded)
-    {
-        NSLog(@"!!! Command %@ failed %@", command, error);
-        [command commandDidFailWithError:error];
-        [self.commandBus commandOperationDidFail:self];
-    }
-    else
-    {
-        [command commandDidComplete];
-        [self.commandBus commandOperationDidComplete:self];
-    }
+    return [NSString stringWithFormat:@"<%@: %p; Command: %@>", NSStringFromClass([self class]), self, self.command];
 }
 
 @end

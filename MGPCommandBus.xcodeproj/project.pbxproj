@@ -13,24 +13,41 @@
 		C71A3FB0188846A60034C838 /* MGPSubCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C71A3FAD188846A60034C838 /* MGPSubCommandHandler.m */; };
 		C71A3FB1188846A60034C838 /* MGPSubCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C71A3FAD188846A60034C838 /* MGPSubCommandHandler.m */; };
 		C71A3FB2188846A60034C838 /* MGPSubCommandHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C71A3FAE188846A60034C838 /* MGPSubCommandHandler+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		C71A3FCC188853680034C838 /* MGPCommand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D85BB5186F5D14007C36C3 /* MGPCommand+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		C71A3FCD1888536C0034C838 /* MGPCommandBus+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C76B93C717C5857800624CFD /* MGPCommandBus+Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C729DCFB18D48E08006BC68D /* UIApplication+MGPCommandBus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C79860821866650300D9617B /* UIApplication+MGPCommandBus.h */; };
+		C729DCFD18D48E10006BC68D /* MGPCommandBus.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C76B93C817C5857800624CFD /* MGPCommandBus.h */; };
+		C729DCFE18D48E13006BC68D /* MGPCommandHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C76B93CA17C5857800624CFD /* MGPCommandHandler.h */; };
+		C729DCFF18D48E15006BC68D /* MGPSubCommandHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = C71A3FAC188846A60034C838 /* MGPSubCommandHandler.h */; };
+		C72F820F1927E2AC00A74870 /* MGPAsynchronousCommandOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C72F820D1927E2AC00A74870 /* MGPAsynchronousCommandOperation.h */; };
+		C72F82101927E2AC00A74870 /* MGPAsynchronousCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C72F820E1927E2AC00A74870 /* MGPAsynchronousCommandOperation.m */; };
+		C72F82111927E2AC00A74870 /* MGPAsynchronousCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C72F820E1927E2AC00A74870 /* MGPAsynchronousCommandOperation.m */; };
+		C72F82141927E2E500A74870 /* MGPSynchronousCommandOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = C72F82121927E2E500A74870 /* MGPSynchronousCommandOperation.h */; };
+		C72F82151927E2E500A74870 /* MGPSynchronousCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C72F82131927E2E500A74870 /* MGPSynchronousCommandOperation.m */; };
+		C72F82161927E2E500A74870 /* MGPSynchronousCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C72F82131927E2E500A74870 /* MGPSynchronousCommandOperation.m */; };
 		C73DA4C7186F8A3D00F731C7 /* MGPCommandBusHandlersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */; };
 		C73DA4EF1870ACA500F731C7 /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC41186F810B00AB1D4B /* TestHelpers.m */; };
-		C791BE79186F41D0005453E6 /* libExpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C791BE5F186F41D0005453E6 /* libExpecta-ios-universal.a */; };
-		C791BE7D186F41D1005453E6 /* libSpecta-ios-universal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C791BE66186F41D0005453E6 /* libSpecta-ios-universal.a */; };
-		C791BE83186F4243005453E6 /* MGPCommandBusCommandsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C791BE82186F4243005453E6 /* MGPCommandBusCommandsSpec.m */; };
+		C78B5B0D192916C600949D74 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93E517C5858E00624CFD /* XCTest.framework */; };
+		C78B5B3E192917BF00949D74 /* libSpecta-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C78B5B39192917B600949D74 /* libSpecta-OSX.a */; };
+		C78B5B3F192917C400949D74 /* libExpecta.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C78B5B26192917B000949D74 /* libExpecta.a */; };
+		C78B5B40192917D300949D74 /* MGPCommandBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C681331883B6D3006D4711 /* MGPCommandBus.framework */; };
+		C78B5B41192917E600949D74 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C681371883B6D3006D4711 /* Foundation.framework */; };
+		C78B5B421929181700949D74 /* MGPCommandBusHandlersSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */; };
+		C78B5B431929181D00949D74 /* MGPCommandBusSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C791BE82186F4243005453E6 /* MGPCommandBusSpec.m */; };
+		C78B5B441929182000949D74 /* MGPCommandHandlerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D2A186F716F006AC00B /* MGPCommandHandlerSpec.m */; };
+		C78B5B451929182300949D74 /* MGPCommandSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C7101D28186F7129006AC00B /* MGPCommandSpec.m */; };
+		C78B5B461929182600949D74 /* TestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC41186F810B00AB1D4B /* TestHelpers.m */; };
+		C791BE83186F4243005453E6 /* MGPCommandBusSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C791BE82186F4243005453E6 /* MGPCommandBusSpec.m */; };
+		C7A9B0B51983024400B26247 /* MGPHTTPDataUploadRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A9B0B31983024400B26247 /* MGPHTTPDataUploadRequestHandler.h */; };
+		C7A9B0B61983024400B26247 /* MGPHTTPDataUploadRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A9B0B41983024400B26247 /* MGPHTTPDataUploadRequestHandler.m */; };
+		C7A9B0B71983024400B26247 /* MGPHTTPDataUploadRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7A9B0B41983024400B26247 /* MGPHTTPDataUploadRequestHandler.m */; };
 		C7C3BC3D186F7A2900AB1D4B /* MGPCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */; };
-		C7C6815C1883B77B006D4711 /* MGPCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C76B93C617C5857800624CFD /* MGPCommand.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7C6815D1883B77B006D4711 /* MGPCommandBus.h in Headers */ = {isa = PBXBuildFile; fileRef = C76B93C817C5857800624CFD /* MGPCommandBus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7C6815E1883B77B006D4711 /* MGPCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C76B93CA17C5857800624CFD /* MGPCommandHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7C6815F1883B788006D4711 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */; };
 		C7C681601883B788006D4711 /* MGPCommandOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */; };
 		C7C681611883B788006D4711 /* MGPCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B93C917C5857800624CFD /* MGPCommandBus.m */; };
 		C7C681651883B894006D4711 /* NSApplication+MGPCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C681631883B841006D4711 /* NSApplication+MGPCommandBus.m */; };
 		C7C681661883B8A7006D4711 /* NSApplication+MGPCommandBus.h in Headers */ = {isa = PBXBuildFile; fileRef = C7C681621883B841006D4711 /* NSApplication+MGPCommandBus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7C6816D1883BA28006D4711 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C681341883B6D3006D4711 /* Cocoa.framework */; };
-		C7D85BB4186F5CB7007C36C3 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */; };
 		C7F5450E18666F42000A7BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93D717C5858E00624CFD /* Foundation.framework */; };
 		C7F5451B18666F42000A7BB5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93E517C5858E00624CFD /* XCTest.framework */; };
 		C7F5451C18666F42000A7BB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C76B93D717C5858E00624CFD /* Foundation.framework */; };
@@ -38,9 +55,140 @@
 		C7F5452018666F42000A7BB5 /* libMGPCommandBus-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7F5450D18666F42000A7BB5 /* libMGPCommandBus-iOS.a */; };
 		C7F5452F18666FF7000A7BB5 /* UIApplication+MGPCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C79860831866650300D9617B /* UIApplication+MGPCommandBus.m */; };
 		C7F5453018666FF7000A7BB5 /* MGPCommandBus.m in Sources */ = {isa = PBXBuildFile; fileRef = C76B93C917C5857800624CFD /* MGPCommandBus.m */; };
+		C7FC107E197ECE1400E7C9C1 /* MGPHTTPCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC1074197ECE1400E7C9C1 /* MGPHTTPCommandHandler.h */; };
+		C7FC107F197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1075197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m */; };
+		C7FC1080197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1075197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m */; };
+		C7FC1081197ECE1400E7C9C1 /* MGPHTTPCommandHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC1076197ECE1400E7C9C1 /* MGPHTTPCommandHandler+Private.h */; };
+		C7FC1082197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC1077197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.h */; };
+		C7FC1083197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1078197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m */; };
+		C7FC1084197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1078197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m */; };
+		C7FC1085197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC1079197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.h */; };
+		C7FC1086197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC107A197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m */; };
+		C7FC1087197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC107A197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m */; };
+		C7FC1088197ECE1400E7C9C1 /* MGPHTTPRequestHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC107B197ECE1400E7C9C1 /* MGPHTTPRequestHandler.h */; };
+		C7FC1089197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC107C197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m */; };
+		C7FC108A197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC107C197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m */; };
+		C7FC108B197ECE1400E7C9C1 /* MGPHTTPRequestHandler+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC107D197ECE1400E7C9C1 /* MGPHTTPRequestHandler+Private.h */; };
+		C7FC1094197ECF1900E7C9C1 /* MGPCommand+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC108D197ECF1900E7C9C1 /* MGPCommand+Private.h */; };
+		C7FC1095197ECF1900E7C9C1 /* MGPCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC108E197ECF1900E7C9C1 /* MGPCommand.h */; };
+		C7FC1096197ECF1900E7C9C1 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC108F197ECF1900E7C9C1 /* MGPCommand.m */; };
+		C7FC1097197ECF1900E7C9C1 /* MGPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC108F197ECF1900E7C9C1 /* MGPCommand.m */; };
+		C7FC1098197ECF1900E7C9C1 /* MGPHTTPCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC1090197ECF1900E7C9C1 /* MGPHTTPCommand.h */; };
+		C7FC1099197ECF1900E7C9C1 /* MGPHTTPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1091197ECF1900E7C9C1 /* MGPHTTPCommand.m */; };
+		C7FC109A197ECF1900E7C9C1 /* MGPHTTPCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1091197ECF1900E7C9C1 /* MGPHTTPCommand.m */; };
+		C7FC109B197ECF1900E7C9C1 /* MGPHTTPImageCommand.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC1092197ECF1900E7C9C1 /* MGPHTTPImageCommand.h */; };
+		C7FC109C197ECF1900E7C9C1 /* MGPHTTPImageCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1093197ECF1900E7C9C1 /* MGPHTTPImageCommand.m */; };
+		C7FC109D197ECF1900E7C9C1 /* MGPHTTPImageCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC1093197ECF1900E7C9C1 /* MGPHTTPImageCommand.m */; };
+		C7FC10A0197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC109E197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.h */; };
+		C7FC10A1197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC109F197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m */; };
+		C7FC10A2197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC109F197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m */; };
+		C7FC10CB197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC10C9197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.h */; };
+		C7FC10CC197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC10CA197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m */; };
+		C7FC10CD197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC10CA197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m */; };
+		C7FC10D6197ED91200E7C9C1 /* KSReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = C7FC10D4197ED91200E7C9C1 /* KSReachability.h */; };
+		C7FC10D7197ED91200E7C9C1 /* KSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC10D5197ED91200E7C9C1 /* KSReachability.m */; };
+		C7FC10D8197ED91200E7C9C1 /* KSReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C7FC10D5197ED91200E7C9C1 /* KSReachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C78B5B17192916C700949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C75F131717C58555008B622B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7C681321883B6D3006D4711;
+			remoteInfo = MGPCommandBus;
+		};
+		C78B5B25192917B000949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF0C13B2DD520010F4D7;
+			remoteInfo = Expecta;
+		};
+		C78B5B27192917B000949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067CE13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOS";
+		};
+		C78B5B29192917B000949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9ACDF1D13B2DD520010F4D7;
+			remoteInfo = ExpectaTests;
+		};
+		C78B5B2B192917B000949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E93067DA13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOSTests";
+		};
+		C78B5B2D192917B000949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C4416F917FF3F4A00978F09;
+			remoteInfo = "ExpectaTests-XCTest";
+		};
+		C78B5B36192917B600949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B2F192917B500949D74 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901BFD18205A3500844A05;
+			remoteInfo = "Specta-iOS";
+		};
+		C78B5B38192917B600949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B2F192917B500949D74 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901C2A18205AB100844A05;
+			remoteInfo = "Specta-OSX";
+		};
+		C78B5B3A192917B600949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B2F192917B500949D74 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901C0D18205A3500844A05;
+			remoteInfo = "SpectaTests-iOS";
+		};
+		C78B5B3C192917B600949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B2F192917B500949D74 /* Specta.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E9901C3B18205AB100844A05;
+			remoteInfo = "Specta-OSXTests";
+		};
+		C78B5B4919291AE300949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B2F192917B500949D74 /* Specta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9901C2918205AB100844A05;
+			remoteInfo = "Specta-OSX";
+		};
+		C78B5B4B19291AE300949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9ACDF0B13B2DD520010F4D7;
+			remoteInfo = Expecta;
+		};
+		C78B5B4D19291AEC00949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B2F192917B500949D74 /* Specta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E9901BFC18205A3500844A05;
+			remoteInfo = "Specta-iOS";
+		};
+		C78B5B4F19291AEC00949D74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E93067CD13B2E6D100EA26FF;
+			remoteInfo = "Expecta-iOS";
+		};
 		C7F5451E18666F42000A7BB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C75F131717C58555008B622B /* Project object */;
@@ -57,6 +205,10 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				C729DCFB18D48E08006BC68D /* UIApplication+MGPCommandBus.h in CopyFiles */,
+				C729DCFE18D48E13006BC68D /* MGPCommandHandler.h in CopyFiles */,
+				C729DCFF18D48E15006BC68D /* MGPSubCommandHandler.h in CopyFiles */,
+				C729DCFD18D48E10006BC68D /* MGPCommandBus.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +220,10 @@
 		C71A3FAC188846A60034C838 /* MGPSubCommandHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPSubCommandHandler.h; sourceTree = "<group>"; };
 		C71A3FAD188846A60034C838 /* MGPSubCommandHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPSubCommandHandler.m; sourceTree = "<group>"; };
 		C71A3FAE188846A60034C838 /* MGPSubCommandHandler+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGPSubCommandHandler+Private.h"; sourceTree = "<group>"; };
-		C76B93C617C5857800624CFD /* MGPCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPCommand.h; sourceTree = "<group>"; };
+		C72F820D1927E2AC00A74870 /* MGPAsynchronousCommandOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPAsynchronousCommandOperation.h; sourceTree = "<group>"; };
+		C72F820E1927E2AC00A74870 /* MGPAsynchronousCommandOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPAsynchronousCommandOperation.m; sourceTree = "<group>"; };
+		C72F82121927E2E500A74870 /* MGPSynchronousCommandOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPSynchronousCommandOperation.h; sourceTree = "<group>"; };
+		C72F82131927E2E500A74870 /* MGPSynchronousCommandOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPSynchronousCommandOperation.m; sourceTree = "<group>"; };
 		C76B93C717C5857800624CFD /* MGPCommandBus+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGPCommandBus+Private.h"; sourceTree = "<group>"; };
 		C76B93C817C5857800624CFD /* MGPCommandBus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGPCommandBus.h; sourceTree = "<group>"; };
 		C76B93C917C5857800624CFD /* MGPCommandBus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBus.m; sourceTree = "<group>"; };
@@ -80,69 +235,16 @@
 		C76B93E517C5858E00624CFD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C76B93E817C5858E00624CFD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C76B940017C5862D00624CFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C791BE3E186F41D0005453E6 /* EXPBackwardCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBackwardCompatibility.h; sourceTree = "<group>"; };
-		C791BE3F186F41D0005453E6 /* EXPBlockDefinedMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPBlockDefinedMatcher.h; sourceTree = "<group>"; };
-		C791BE40186F41D0005453E6 /* EXPDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDefines.h; sourceTree = "<group>"; };
-		C791BE41186F41D0005453E6 /* EXPDoubleTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPDoubleTuple.h; sourceTree = "<group>"; };
-		C791BE42186F41D0005453E6 /* Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expecta.h; sourceTree = "<group>"; };
-		C791BE43186F41D0005453E6 /* ExpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpectaSupport.h; sourceTree = "<group>"; };
-		C791BE44186F41D0005453E6 /* EXPExpect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPExpect.h; sourceTree = "<group>"; };
-		C791BE45186F41D0005453E6 /* EXPFloatTuple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPFloatTuple.h; sourceTree = "<group>"; };
-		C791BE46186F41D0005453E6 /* EXPMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcher.h; sourceTree = "<group>"; };
-		C791BE47186F41D0005453E6 /* EXPMatcherHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatcherHelpers.h; sourceTree = "<group>"; };
-		C791BE48186F41D0005453E6 /* EXPMatchers+beCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beCloseTo.h"; sourceTree = "<group>"; };
-		C791BE49186F41D0005453E6 /* EXPMatchers+beFalsy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beFalsy.h"; sourceTree = "<group>"; };
-		C791BE4A186F41D0005453E6 /* EXPMatchers+beGreaterThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThan.h"; sourceTree = "<group>"; };
-		C791BE4B186F41D0005453E6 /* EXPMatchers+beGreaterThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beGreaterThanOrEqualTo.h"; sourceTree = "<group>"; };
-		C791BE4C186F41D0005453E6 /* EXPMatchers+beIdenticalTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beIdenticalTo.h"; sourceTree = "<group>"; };
-		C791BE4D186F41D0005453E6 /* EXPMatchers+beInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInstanceOf.h"; sourceTree = "<group>"; };
-		C791BE4E186F41D0005453E6 /* EXPMatchers+beInTheRangeOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beInTheRangeOf.h"; sourceTree = "<group>"; };
-		C791BE4F186F41D0005453E6 /* EXPMatchers+beKindOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beKindOf.h"; sourceTree = "<group>"; };
-		C791BE50186F41D0005453E6 /* EXPMatchers+beLessThan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThan.h"; sourceTree = "<group>"; };
-		C791BE51186F41D0005453E6 /* EXPMatchers+beLessThanOrEqualTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beLessThanOrEqualTo.h"; sourceTree = "<group>"; };
-		C791BE52186F41D0005453E6 /* EXPMatchers+beNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beNil.h"; sourceTree = "<group>"; };
-		C791BE53186F41D0005453E6 /* EXPMatchers+beSubclassOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beSubclassOf.h"; sourceTree = "<group>"; };
-		C791BE54186F41D0005453E6 /* EXPMatchers+beSupersetOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beSupersetOf.h"; sourceTree = "<group>"; };
-		C791BE55186F41D0005453E6 /* EXPMatchers+beTruthy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+beTruthy.h"; sourceTree = "<group>"; };
-		C791BE56186F41D0005453E6 /* EXPMatchers+conformTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+conformTo.h"; sourceTree = "<group>"; };
-		C791BE57186F41D0005453E6 /* EXPMatchers+contain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+contain.h"; sourceTree = "<group>"; };
-		C791BE58186F41D0005453E6 /* EXPMatchers+equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+equal.h"; sourceTree = "<group>"; };
-		C791BE59186F41D0005453E6 /* EXPMatchers+haveCountOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+haveCountOf.h"; sourceTree = "<group>"; };
-		C791BE5A186F41D0005453E6 /* EXPMatchers+raise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+raise.h"; sourceTree = "<group>"; };
-		C791BE5B186F41D0005453E6 /* EXPMatchers+raiseWithReason.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+raiseWithReason.h"; sourceTree = "<group>"; };
-		C791BE5C186F41D0005453E6 /* EXPMatchers+respondTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EXPMatchers+respondTo.h"; sourceTree = "<group>"; };
-		C791BE5D186F41D0005453E6 /* EXPMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPMatchers.h; sourceTree = "<group>"; };
-		C791BE5E186F41D0005453E6 /* EXPUnsupportedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXPUnsupportedObject.h; sourceTree = "<group>"; };
-		C791BE5F186F41D0005453E6 /* libExpecta-ios-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-ios-universal.a"; sourceTree = "<group>"; };
-		C791BE60186F41D0005453E6 /* libExpecta-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libExpecta-macosx.a"; sourceTree = "<group>"; };
-		C791BE61186F41D0005453E6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C791BE62186F41D0005453E6 /* NSObject+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Expecta.h"; sourceTree = "<group>"; };
-		C791BE63186F41D0005453E6 /* NSValue+Expecta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+Expecta.h"; sourceTree = "<group>"; };
-		C791BE64186F41D0005453E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		C791BE66186F41D0005453E6 /* libSpecta-ios-universal.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSpecta-ios-universal.a"; sourceTree = "<group>"; };
-		C791BE67186F41D0005453E6 /* libSpecta-macosx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libSpecta-macosx.a"; sourceTree = "<group>"; };
-		C791BE68186F41D0005453E6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C791BE69186F41D0005453E6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		C791BE6A186F41D0005453E6 /* Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Specta.h; sourceTree = "<group>"; };
-		C791BE6B186F41D0005453E6 /* SpectaSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectaSupport.h; sourceTree = "<group>"; };
-		C791BE6C186F41D0005453E6 /* SpectaTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectaTypes.h; sourceTree = "<group>"; };
-		C791BE6D186F41D0005453E6 /* SpectaUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpectaUtility.h; sourceTree = "<group>"; };
-		C791BE6E186F41D0005453E6 /* SPTExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTExample.h; sourceTree = "<group>"; };
-		C791BE6F186F41D0005453E6 /* SPTExampleGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTExampleGroup.h; sourceTree = "<group>"; };
-		C791BE70186F41D0005453E6 /* SPTNestedReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTNestedReporter.h; sourceTree = "<group>"; };
-		C791BE71186F41D0005453E6 /* SPTReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTReporter.h; sourceTree = "<group>"; };
-		C791BE72186F41D0005453E6 /* SPTSharedExampleGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSharedExampleGroups.h; sourceTree = "<group>"; };
-		C791BE73186F41D0005453E6 /* SPTSpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTSpec.h; sourceTree = "<group>"; };
-		C791BE74186F41D0005453E6 /* SPTXCTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTXCTestCase.h; sourceTree = "<group>"; };
-		C791BE75186F41D0005453E6 /* SPTXCTestReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTXCTestReporter.h; sourceTree = "<group>"; };
-		C791BE76186F41D0005453E6 /* XCTestCase+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+Specta.h"; sourceTree = "<group>"; };
-		C791BE77186F41D0005453E6 /* XCTestLog+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestLog+Specta.h"; sourceTree = "<group>"; };
-		C791BE78186F41D0005453E6 /* XCTestRun+Specta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestRun+Specta.h"; sourceTree = "<group>"; };
-		C791BE82186F4243005453E6 /* MGPCommandBusCommandsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBusCommandsSpec.m; sourceTree = "<group>"; };
+		C78B5B0C192916C600949D74 /* MGPCommandBus Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MGPCommandBus Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C78B5B1D192917B000949D74 /* Expecta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Expecta.xcodeproj; path = expecta/Expecta.xcodeproj; sourceTree = "<group>"; };
+		C78B5B2F192917B500949D74 /* Specta.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Specta.xcodeproj; path = specta/Specta.xcodeproj; sourceTree = "<group>"; };
+		C78B5B471929189A00949D74 /* MGPCommandBusTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGPCommandBusTests-Prefix.pch"; sourceTree = "<group>"; };
+		C791BE82186F4243005453E6 /* MGPCommandBusSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBusSpec.m; sourceTree = "<group>"; };
 		C79860821866650300D9617B /* UIApplication+MGPCommandBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+MGPCommandBus.h"; sourceTree = "<group>"; };
 		C79860831866650300D9617B /* UIApplication+MGPCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+MGPCommandBus.m"; sourceTree = "<group>"; };
 		C79860851866653900D9617B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		C7C3BC3A186F74ED00AB1D4B /* MGPCommandBusInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MGPCommandBusInterface.h; path = Library/MGPCommandBusInterface.h; sourceTree = "<group>"; };
+		C7A9B0B31983024400B26247 /* MGPHTTPDataUploadRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPHTTPDataUploadRequestHandler.h; sourceTree = "<group>"; };
+		C7A9B0B41983024400B26247 /* MGPHTTPDataUploadRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPHTTPDataUploadRequestHandler.m; sourceTree = "<group>"; };
 		C7C3BC3B186F7A2900AB1D4B /* MGPCommandOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPCommandOperation.h; sourceTree = "<group>"; };
 		C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandOperation.m; sourceTree = "<group>"; };
 		C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommandBusHandlersSpec.m; sourceTree = "<group>"; };
@@ -156,13 +258,46 @@
 		C7C681391883B6D3006D4711 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C7C681621883B841006D4711 /* NSApplication+MGPCommandBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+MGPCommandBus.h"; sourceTree = "<group>"; };
 		C7C681631883B841006D4711 /* NSApplication+MGPCommandBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MGPCommandBus.m"; sourceTree = "<group>"; };
-		C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommand.m; sourceTree = "<group>"; };
-		C7D85BB5186F5D14007C36C3 /* MGPCommand+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MGPCommand+Private.h"; sourceTree = "<group>"; };
 		C7F5450D18666F42000A7BB5 /* libMGPCommandBus-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMGPCommandBus-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F5451A18666F42000A7BB5 /* MGPCommandBusTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MGPCommandBusTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7FC1074197ECE1400E7C9C1 /* MGPHTTPCommandHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPHTTPCommandHandler.h; sourceTree = "<group>"; };
+		C7FC1075197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPHTTPCommandHandler.m; sourceTree = "<group>"; };
+		C7FC1076197ECE1400E7C9C1 /* MGPHTTPCommandHandler+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGPHTTPCommandHandler+Private.h"; sourceTree = "<group>"; };
+		C7FC1077197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPHTTPDataRequestHandler.h; sourceTree = "<group>"; };
+		C7FC1078197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPHTTPDataRequestHandler.m; sourceTree = "<group>"; };
+		C7FC1079197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPHTTPImageRequestHandler.h; sourceTree = "<group>"; };
+		C7FC107A197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPHTTPImageRequestHandler.m; sourceTree = "<group>"; };
+		C7FC107B197ECE1400E7C9C1 /* MGPHTTPRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPHTTPRequestHandler.h; sourceTree = "<group>"; };
+		C7FC107C197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPHTTPRequestHandler.m; sourceTree = "<group>"; };
+		C7FC107D197ECE1400E7C9C1 /* MGPHTTPRequestHandler+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGPHTTPRequestHandler+Private.h"; sourceTree = "<group>"; };
+		C7FC108D197ECF1900E7C9C1 /* MGPCommand+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MGPCommand+Private.h"; sourceTree = "<group>"; };
+		C7FC108E197ECF1900E7C9C1 /* MGPCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPCommand.h; sourceTree = "<group>"; };
+		C7FC108F197ECF1900E7C9C1 /* MGPCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPCommand.m; sourceTree = "<group>"; };
+		C7FC1090197ECF1900E7C9C1 /* MGPHTTPCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPHTTPCommand.h; sourceTree = "<group>"; };
+		C7FC1091197ECF1900E7C9C1 /* MGPHTTPCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPHTTPCommand.m; sourceTree = "<group>"; };
+		C7FC1092197ECF1900E7C9C1 /* MGPHTTPImageCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPHTTPImageCommand.h; sourceTree = "<group>"; };
+		C7FC1093197ECF1900E7C9C1 /* MGPHTTPImageCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPHTTPImageCommand.m; sourceTree = "<group>"; };
+		C7FC109E197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+HTTPStatusAdditions.h"; sourceTree = "<group>"; };
+		C7FC109F197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+HTTPStatusAdditions.m"; sourceTree = "<group>"; };
+		C7FC10C9197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGPNetworkCommandHandler.h; sourceTree = "<group>"; };
+		C7FC10CA197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGPNetworkCommandHandler.m; sourceTree = "<group>"; };
+		C7FC10D4197ED91200E7C9C1 /* KSReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KSReachability.h; path = Vendor/KSReachability/KSReachability.h; sourceTree = "<group>"; };
+		C7FC10D5197ED91200E7C9C1 /* KSReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KSReachability.m; path = Vendor/KSReachability/KSReachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C78B5B09192916C600949D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78B5B41192917E600949D74 /* Foundation.framework in Frameworks */,
+				C78B5B40192917D300949D74 /* MGPCommandBus.framework in Frameworks */,
+				C78B5B0D192916C600949D74 /* XCTest.framework in Frameworks */,
+				C78B5B3E192917BF00949D74 /* libSpecta-OSX.a in Frameworks */,
+				C78B5B3F192917C400949D74 /* libExpecta.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7C6812F1883B6D3006D4711 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,24 +318,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C791BE79186F41D0005453E6 /* libExpecta-ios-universal.a in Frameworks */,
 				C7F5451B18666F42000A7BB5 /* XCTest.framework in Frameworks */,
 				C7F5451D18666F42000A7BB5 /* UIKit.framework in Frameworks */,
 				C7F5451C18666F42000A7BB5 /* Foundation.framework in Frameworks */,
 				C7F5452018666F42000A7BB5 /* libMGPCommandBus-iOS.a in Frameworks */,
-				C791BE7D186F41D1005453E6 /* libSpecta-ios-universal.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C72F820C1927E28700A74870 /* Command Operations */ = {
+			isa = PBXGroup;
+			children = (
+				C7C3BC3B186F7A2900AB1D4B /* MGPCommandOperation.h */,
+				C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */,
+				C72F82121927E2E500A74870 /* MGPSynchronousCommandOperation.h */,
+				C72F82131927E2E500A74870 /* MGPSynchronousCommandOperation.m */,
+				C72F820D1927E2AC00A74870 /* MGPAsynchronousCommandOperation.h */,
+				C72F820E1927E2AC00A74870 /* MGPAsynchronousCommandOperation.m */,
+			);
+			name = "Command Operations";
+			sourceTree = "<group>";
+		};
 		C75F131617C58555008B622B = {
 			isa = PBXGroup;
 			children = (
-				C7C3BC3A186F74ED00AB1D4B /* MGPCommandBusInterface.h */,
 				C76B93C517C5857800624CFD /* Library */,
 				C76B93FB17C5862D00624CFD /* Tests */,
+				C7FC10D3197ED90100E7C9C1 /* Vendor */,
 				C76B93D617C5858E00624CFD /* Frameworks */,
 				C76B93D517C5858E00624CFD /* Products */,
 			);
@@ -209,22 +355,16 @@
 		C76B93C517C5857800624CFD /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				C7C681621883B841006D4711 /* NSApplication+MGPCommandBus.h */,
-				C7C681631883B841006D4711 /* NSApplication+MGPCommandBus.m */,
-				C79860821866650300D9617B /* UIApplication+MGPCommandBus.h */,
-				C79860831866650300D9617B /* UIApplication+MGPCommandBus.m */,
-				C76B93C617C5857800624CFD /* MGPCommand.h */,
-				C7D85BB5186F5D14007C36C3 /* MGPCommand+Private.h */,
-				C7D85BB3186F5CB7007C36C3 /* MGPCommand.m */,
-				C7C3BC3B186F7A2900AB1D4B /* MGPCommandOperation.h */,
-				C7C3BC3C186F7A2900AB1D4B /* MGPCommandOperation.m */,
+				C7FC109E197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.h */,
+				C7FC109F197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m */,
+				C7FC108C197ECF1900E7C9C1 /* Commands */,
 				C76B93C817C5857800624CFD /* MGPCommandBus.h */,
 				C76B93C717C5857800624CFD /* MGPCommandBus+Private.h */,
 				C76B93C917C5857800624CFD /* MGPCommandBus.m */,
+				C72F820C1927E28700A74870 /* Command Operations */,
 				C76B93CA17C5857800624CFD /* MGPCommandHandler.h */,
-				C71A3FAC188846A60034C838 /* MGPSubCommandHandler.h */,
-				C71A3FAE188846A60034C838 /* MGPSubCommandHandler+Private.h */,
-				C71A3FAD188846A60034C838 /* MGPSubCommandHandler.m */,
+				C7FC1073197ECDEC00E7C9C1 /* Handlers */,
+				C78B5B5119292C1200949D74 /* Application Hooks */,
 				C76B93CB17C5857800624CFD /* Support */,
 			);
 			path = Library;
@@ -246,6 +386,7 @@
 				C7F5450D18666F42000A7BB5 /* libMGPCommandBus-iOS.a */,
 				C7F5451A18666F42000A7BB5 /* MGPCommandBusTests-iOS.xctest */,
 				C7C681331883B6D3006D4711 /* MGPCommandBus.framework */,
+				C78B5B0C192916C600949D74 /* MGPCommandBus Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,7 +407,7 @@
 		C76B93FB17C5862D00624CFD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				C791BE82186F4243005453E6 /* MGPCommandBusCommandsSpec.m */,
+				C791BE82186F4243005453E6 /* MGPCommandBusSpec.m */,
 				C7C3BC3E186F80A600AB1D4B /* MGPCommandBusHandlersSpec.m */,
 				C7101D2A186F716F006AC00B /* MGPCommandHandlerSpec.m */,
 				C7101D28186F7129006AC00B /* MGPCommandSpec.m */,
@@ -281,91 +422,54 @@
 		C76B93FE17C5862D00624CFD /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				C78B5B471929189A00949D74 /* MGPCommandBusTests-Prefix.pch */,
 				C7C494A2186F3D4900496A32 /* MGPCommandBusTests-Info.plist */,
 				C76B93FF17C5862D00624CFD /* InfoPlist.strings */,
 			);
 			path = Support;
 			sourceTree = "<group>";
 		};
+		C78B5B1E192917B000949D74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C78B5B26192917B000949D74 /* libExpecta.a */,
+				C78B5B28192917B000949D74 /* libExpecta-iOS.a */,
+				C78B5B2A192917B000949D74 /* ExpectaTests.octest */,
+				C78B5B2C192917B000949D74 /* Expecta-iOSTests.octest */,
+				C78B5B2E192917B000949D74 /* ExpectaTests-XCTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C78B5B30192917B500949D74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C78B5B37192917B600949D74 /* libSpecta-iOS.a */,
+				C78B5B39192917B600949D74 /* libSpecta-OSX.a */,
+				C78B5B3B192917B600949D74 /* SpectaTests-iOS.xctest */,
+				C78B5B3D192917B600949D74 /* Specta-OSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C78B5B5119292C1200949D74 /* Application Hooks */ = {
+			isa = PBXGroup;
+			children = (
+				C7C681621883B841006D4711 /* NSApplication+MGPCommandBus.h */,
+				C7C681631883B841006D4711 /* NSApplication+MGPCommandBus.m */,
+				C79860821866650300D9617B /* UIApplication+MGPCommandBus.h */,
+				C79860831866650300D9617B /* UIApplication+MGPCommandBus.m */,
+			);
+			name = "Application Hooks";
+			sourceTree = "<group>";
+		};
 		C791BE3C186F41D0005453E6 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				C791BE3D186F41D0005453E6 /* Expecta */,
-				C791BE65186F41D0005453E6 /* Specta */,
+				C78B5B2F192917B500949D74 /* Specta.xcodeproj */,
+				C78B5B1D192917B000949D74 /* Expecta.xcodeproj */,
 			);
 			path = Vendor;
-			sourceTree = "<group>";
-		};
-		C791BE3D186F41D0005453E6 /* Expecta */ = {
-			isa = PBXGroup;
-			children = (
-				C791BE3E186F41D0005453E6 /* EXPBackwardCompatibility.h */,
-				C791BE3F186F41D0005453E6 /* EXPBlockDefinedMatcher.h */,
-				C791BE40186F41D0005453E6 /* EXPDefines.h */,
-				C791BE41186F41D0005453E6 /* EXPDoubleTuple.h */,
-				C791BE42186F41D0005453E6 /* Expecta.h */,
-				C791BE43186F41D0005453E6 /* ExpectaSupport.h */,
-				C791BE44186F41D0005453E6 /* EXPExpect.h */,
-				C791BE45186F41D0005453E6 /* EXPFloatTuple.h */,
-				C791BE46186F41D0005453E6 /* EXPMatcher.h */,
-				C791BE47186F41D0005453E6 /* EXPMatcherHelpers.h */,
-				C791BE48186F41D0005453E6 /* EXPMatchers+beCloseTo.h */,
-				C791BE49186F41D0005453E6 /* EXPMatchers+beFalsy.h */,
-				C791BE4A186F41D0005453E6 /* EXPMatchers+beGreaterThan.h */,
-				C791BE4B186F41D0005453E6 /* EXPMatchers+beGreaterThanOrEqualTo.h */,
-				C791BE4C186F41D0005453E6 /* EXPMatchers+beIdenticalTo.h */,
-				C791BE4D186F41D0005453E6 /* EXPMatchers+beInstanceOf.h */,
-				C791BE4E186F41D0005453E6 /* EXPMatchers+beInTheRangeOf.h */,
-				C791BE4F186F41D0005453E6 /* EXPMatchers+beKindOf.h */,
-				C791BE50186F41D0005453E6 /* EXPMatchers+beLessThan.h */,
-				C791BE51186F41D0005453E6 /* EXPMatchers+beLessThanOrEqualTo.h */,
-				C791BE52186F41D0005453E6 /* EXPMatchers+beNil.h */,
-				C791BE53186F41D0005453E6 /* EXPMatchers+beSubclassOf.h */,
-				C791BE54186F41D0005453E6 /* EXPMatchers+beSupersetOf.h */,
-				C791BE55186F41D0005453E6 /* EXPMatchers+beTruthy.h */,
-				C791BE56186F41D0005453E6 /* EXPMatchers+conformTo.h */,
-				C791BE57186F41D0005453E6 /* EXPMatchers+contain.h */,
-				C791BE58186F41D0005453E6 /* EXPMatchers+equal.h */,
-				C791BE59186F41D0005453E6 /* EXPMatchers+haveCountOf.h */,
-				C791BE5A186F41D0005453E6 /* EXPMatchers+raise.h */,
-				C791BE5B186F41D0005453E6 /* EXPMatchers+raiseWithReason.h */,
-				C791BE5C186F41D0005453E6 /* EXPMatchers+respondTo.h */,
-				C791BE5D186F41D0005453E6 /* EXPMatchers.h */,
-				C791BE5E186F41D0005453E6 /* EXPUnsupportedObject.h */,
-				C791BE5F186F41D0005453E6 /* libExpecta-ios-universal.a */,
-				C791BE60186F41D0005453E6 /* libExpecta-macosx.a */,
-				C791BE61186F41D0005453E6 /* LICENSE */,
-				C791BE62186F41D0005453E6 /* NSObject+Expecta.h */,
-				C791BE63186F41D0005453E6 /* NSValue+Expecta.h */,
-				C791BE64186F41D0005453E6 /* README.md */,
-			);
-			path = Expecta;
-			sourceTree = "<group>";
-		};
-		C791BE65186F41D0005453E6 /* Specta */ = {
-			isa = PBXGroup;
-			children = (
-				C791BE66186F41D0005453E6 /* libSpecta-ios-universal.a */,
-				C791BE67186F41D0005453E6 /* libSpecta-macosx.a */,
-				C791BE68186F41D0005453E6 /* LICENSE */,
-				C791BE69186F41D0005453E6 /* README.md */,
-				C791BE6A186F41D0005453E6 /* Specta.h */,
-				C791BE6B186F41D0005453E6 /* SpectaSupport.h */,
-				C791BE6C186F41D0005453E6 /* SpectaTypes.h */,
-				C791BE6D186F41D0005453E6 /* SpectaUtility.h */,
-				C791BE6E186F41D0005453E6 /* SPTExample.h */,
-				C791BE6F186F41D0005453E6 /* SPTExampleGroup.h */,
-				C791BE70186F41D0005453E6 /* SPTNestedReporter.h */,
-				C791BE71186F41D0005453E6 /* SPTReporter.h */,
-				C791BE72186F41D0005453E6 /* SPTSharedExampleGroups.h */,
-				C791BE73186F41D0005453E6 /* SPTSpec.h */,
-				C791BE74186F41D0005453E6 /* SPTXCTestCase.h */,
-				C791BE75186F41D0005453E6 /* SPTXCTestReporter.h */,
-				C791BE76186F41D0005453E6 /* XCTestCase+Specta.h */,
-				C791BE77186F41D0005453E6 /* XCTestLog+Specta.h */,
-				C791BE78186F41D0005453E6 /* XCTestRun+Specta.h */,
-			);
-			path = Specta;
 			sourceTree = "<group>";
 		};
 		C7C681361883B6D3006D4711 /* Other Frameworks */ = {
@@ -378,6 +482,61 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
+		C7FC1073197ECDEC00E7C9C1 /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				C7FC1074197ECE1400E7C9C1 /* MGPHTTPCommandHandler.h */,
+				C7FC1076197ECE1400E7C9C1 /* MGPHTTPCommandHandler+Private.h */,
+				C7FC1075197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m */,
+				C7FC107B197ECE1400E7C9C1 /* MGPHTTPRequestHandler.h */,
+				C7FC107D197ECE1400E7C9C1 /* MGPHTTPRequestHandler+Private.h */,
+				C7FC107C197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m */,
+				C7FC1077197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.h */,
+				C7FC1078197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m */,
+				C7A9B0B31983024400B26247 /* MGPHTTPDataUploadRequestHandler.h */,
+				C7A9B0B41983024400B26247 /* MGPHTTPDataUploadRequestHandler.m */,
+				C7FC1079197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.h */,
+				C7FC107A197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m */,
+				C7FC10C9197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.h */,
+				C7FC10CA197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m */,
+				C71A3FAC188846A60034C838 /* MGPSubCommandHandler.h */,
+				C71A3FAE188846A60034C838 /* MGPSubCommandHandler+Private.h */,
+				C71A3FAD188846A60034C838 /* MGPSubCommandHandler.m */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		C7FC108C197ECF1900E7C9C1 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				C7FC108D197ECF1900E7C9C1 /* MGPCommand+Private.h */,
+				C7FC108E197ECF1900E7C9C1 /* MGPCommand.h */,
+				C7FC108F197ECF1900E7C9C1 /* MGPCommand.m */,
+				C7FC1090197ECF1900E7C9C1 /* MGPHTTPCommand.h */,
+				C7FC1091197ECF1900E7C9C1 /* MGPHTTPCommand.m */,
+				C7FC1092197ECF1900E7C9C1 /* MGPHTTPImageCommand.h */,
+				C7FC1093197ECF1900E7C9C1 /* MGPHTTPImageCommand.m */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		C7FC10D3197ED90100E7C9C1 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				C7FC10D9197ED91C00E7C9C1 /* KSReachability */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		C7FC10D9197ED91C00E7C9C1 /* KSReachability */ = {
+			isa = PBXGroup;
+			children = (
+				C7FC10D4197ED91200E7C9C1 /* KSReachability.h */,
+				C7FC10D5197ED91200E7C9C1 /* KSReachability.m */,
+			);
+			name = KSReachability;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -386,19 +545,53 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C681661883B8A7006D4711 /* NSApplication+MGPCommandBus.h in Headers */,
-				C7C6815C1883B77B006D4711 /* MGPCommand.h in Headers */,
+				C7FC109B197ECF1900E7C9C1 /* MGPHTTPImageCommand.h in Headers */,
+				C7FC1085197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.h in Headers */,
+				C7A9B0B51983024400B26247 /* MGPHTTPDataUploadRequestHandler.h in Headers */,
+				C7FC107E197ECE1400E7C9C1 /* MGPHTTPCommandHandler.h in Headers */,
+				C7FC10D6197ED91200E7C9C1 /* KSReachability.h in Headers */,
+				C7FC1082197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.h in Headers */,
+				C7FC1094197ECF1900E7C9C1 /* MGPCommand+Private.h in Headers */,
+				C7FC1098197ECF1900E7C9C1 /* MGPHTTPCommand.h in Headers */,
+				C7FC10A0197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.h in Headers */,
+				C72F82141927E2E500A74870 /* MGPSynchronousCommandOperation.h in Headers */,
+				C7FC108B197ECE1400E7C9C1 /* MGPHTTPRequestHandler+Private.h in Headers */,
+				C7FC1081197ECE1400E7C9C1 /* MGPHTTPCommandHandler+Private.h in Headers */,
 				C71A3FAF188846A60034C838 /* MGPSubCommandHandler.h in Headers */,
 				C71A3FB2188846A60034C838 /* MGPSubCommandHandler+Private.h in Headers */,
+				C7FC1088197ECE1400E7C9C1 /* MGPHTTPRequestHandler.h in Headers */,
+				C72F820F1927E2AC00A74870 /* MGPAsynchronousCommandOperation.h in Headers */,
 				C7C6815D1883B77B006D4711 /* MGPCommandBus.h in Headers */,
 				C7C6815E1883B77B006D4711 /* MGPCommandHandler.h in Headers */,
-				C71A3FCC188853680034C838 /* MGPCommand+Private.h in Headers */,
 				C71A3FCD1888536C0034C838 /* MGPCommandBus+Private.h in Headers */,
+				C7FC1095197ECF1900E7C9C1 /* MGPCommand.h in Headers */,
+				C7FC10CB197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C78B5B0B192916C600949D74 /* MGPCommandBus Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C78B5B19192916C700949D74 /* Build configuration list for PBXNativeTarget "MGPCommandBus Tests" */;
+			buildPhases = (
+				C78B5B08192916C600949D74 /* Sources */,
+				C78B5B09192916C600949D74 /* Frameworks */,
+				C78B5B0A192916C600949D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C78B5B4A19291AE300949D74 /* PBXTargetDependency */,
+				C78B5B4C19291AE300949D74 /* PBXTargetDependency */,
+				C78B5B18192916C700949D74 /* PBXTargetDependency */,
+			);
+			name = "MGPCommandBus Tests";
+			productName = "MGPCommandBus Tests";
+			productReference = C78B5B0C192916C600949D74 /* MGPCommandBus Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C7C681321883B6D3006D4711 /* MGPCommandBus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7C6815A1883B6D3006D4711 /* Build configuration list for PBXNativeTarget "MGPCommandBus" */;
@@ -445,6 +638,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				C78B5B4E19291AEC00949D74 /* PBXTargetDependency */,
+				C78B5B5019291AEC00949D74 /* PBXTargetDependency */,
 				C7F5451F18666F42000A7BB5 /* PBXTargetDependency */,
 			);
 			name = "MGPCommandBusTests-iOS";
@@ -458,8 +653,11 @@
 		C75F131717C58555008B622B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0600;
 				TargetAttributes = {
+					C78B5B0B192916C600949D74 = {
+						TestTargetID = C7C681321883B6D3006D4711;
+					};
 					C7F5451918666F42000A7BB5 = {
 						TestTargetID = C7C681321883B6D3006D4711;
 					};
@@ -475,16 +673,100 @@
 			mainGroup = C75F131617C58555008B622B;
 			productRefGroup = C76B93D517C5858E00624CFD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C78B5B1E192917B000949D74 /* Products */;
+					ProjectRef = C78B5B1D192917B000949D74 /* Expecta.xcodeproj */;
+				},
+				{
+					ProductGroup = C78B5B30192917B500949D74 /* Products */;
+					ProjectRef = C78B5B2F192917B500949D74 /* Specta.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C7F5450C18666F42000A7BB5 /* MGPCommandBus-iOS */,
 				C7F5451918666F42000A7BB5 /* MGPCommandBusTests-iOS */,
 				C7C681321883B6D3006D4711 /* MGPCommandBus */,
+				C78B5B0B192916C600949D74 /* MGPCommandBus Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		C78B5B26192917B000949D74 /* libExpecta.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpecta.a;
+			remoteRef = C78B5B25192917B000949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B28192917B000949D74 /* libExpecta-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libExpecta-iOS.a";
+			remoteRef = C78B5B27192917B000949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B2A192917B000949D74 /* ExpectaTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ExpectaTests.octest;
+			remoteRef = C78B5B29192917B000949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B2C192917B000949D74 /* Expecta-iOSTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Expecta-iOSTests.octest";
+			remoteRef = C78B5B2B192917B000949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B2E192917B000949D74 /* ExpectaTests-XCTest.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "ExpectaTests-XCTest.xctest";
+			remoteRef = C78B5B2D192917B000949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B37192917B600949D74 /* libSpecta-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSpecta-iOS.a";
+			remoteRef = C78B5B36192917B600949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B39192917B600949D74 /* libSpecta-OSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libSpecta-OSX.a";
+			remoteRef = C78B5B38192917B600949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B3B192917B600949D74 /* SpectaTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SpectaTests-iOS.xctest";
+			remoteRef = C78B5B3A192917B600949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C78B5B3D192917B600949D74 /* Specta-OSXTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Specta-OSXTests.xctest";
+			remoteRef = C78B5B3C192917B600949D74 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
+		C78B5B0A192916C600949D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7C681311883B6D3006D4711 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,15 +784,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C78B5B08192916C600949D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C78B5B431929181D00949D74 /* MGPCommandBusSpec.m in Sources */,
+				C78B5B451929182300949D74 /* MGPCommandSpec.m in Sources */,
+				C78B5B421929181700949D74 /* MGPCommandBusHandlersSpec.m in Sources */,
+				C78B5B441929182000949D74 /* MGPCommandHandlerSpec.m in Sources */,
+				C78B5B461929182600949D74 /* TestHelpers.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7C6812E1883B6D3006D4711 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7C6815F1883B788006D4711 /* MGPCommand.m in Sources */,
-				C7C681601883B788006D4711 /* MGPCommandOperation.m in Sources */,
-				C71A3FB1188846A60034C838 /* MGPSubCommandHandler.m in Sources */,
 				C7C681651883B894006D4711 /* NSApplication+MGPCommandBus.m in Sources */,
+				C7FC109A197ECF1900E7C9C1 /* MGPHTTPCommand.m in Sources */,
+				C7FC1087197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m in Sources */,
 				C7C681611883B788006D4711 /* MGPCommandBus.m in Sources */,
+				C7FC1084197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m in Sources */,
+				C7FC1080197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m in Sources */,
+				C7FC1097197ECF1900E7C9C1 /* MGPCommand.m in Sources */,
+				C7C681601883B788006D4711 /* MGPCommandOperation.m in Sources */,
+				C7FC108A197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m in Sources */,
+				C7FC109D197ECF1900E7C9C1 /* MGPHTTPImageCommand.m in Sources */,
+				C7FC10D8197ED91200E7C9C1 /* KSReachability.m in Sources */,
+				C72F82111927E2AC00A74870 /* MGPAsynchronousCommandOperation.m in Sources */,
+				C7FC10A2197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m in Sources */,
+				C72F82161927E2E500A74870 /* MGPSynchronousCommandOperation.m in Sources */,
+				C71A3FB1188846A60034C838 /* MGPSubCommandHandler.m in Sources */,
+				C7A9B0B71983024400B26247 /* MGPHTTPDataUploadRequestHandler.m in Sources */,
+				C7FC10CD197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,10 +825,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C3BC3D186F7A2900AB1D4B /* MGPCommandOperation.m in Sources */,
+				C7FC1099197ECF1900E7C9C1 /* MGPHTTPCommand.m in Sources */,
+				C7FC1086197ECE1400E7C9C1 /* MGPHTTPImageRequestHandler.m in Sources */,
 				C7F5452F18666FF7000A7BB5 /* UIApplication+MGPCommandBus.m in Sources */,
 				C71A3FB0188846A60034C838 /* MGPSubCommandHandler.m in Sources */,
+				C7FC1083197ECE1400E7C9C1 /* MGPHTTPDataRequestHandler.m in Sources */,
+				C7FC107F197ECE1400E7C9C1 /* MGPHTTPCommandHandler.m in Sources */,
+				C7FC1096197ECF1900E7C9C1 /* MGPCommand.m in Sources */,
 				C7F5453018666FF7000A7BB5 /* MGPCommandBus.m in Sources */,
-				C7D85BB4186F5CB7007C36C3 /* MGPCommand.m in Sources */,
+				C7FC1089197ECE1400E7C9C1 /* MGPHTTPRequestHandler.m in Sources */,
+				C7FC10D7197ED91200E7C9C1 /* KSReachability.m in Sources */,
+				C7FC109C197ECF1900E7C9C1 /* MGPHTTPImageCommand.m in Sources */,
+				C72F82101927E2AC00A74870 /* MGPAsynchronousCommandOperation.m in Sources */,
+				C7FC10A1197ECF5E00E7C9C1 /* NSNumber+HTTPStatusAdditions.m in Sources */,
+				C72F82151927E2E500A74870 /* MGPSynchronousCommandOperation.m in Sources */,
+				C7A9B0B61983024400B26247 /* MGPHTTPDataUploadRequestHandler.m in Sources */,
+				C7FC10CC197ED8BC00E7C9C1 /* MGPNetworkCommandHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,7 +849,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7101D2B186F716F006AC00B /* MGPCommandHandlerSpec.m in Sources */,
-				C791BE83186F4243005453E6 /* MGPCommandBusCommandsSpec.m in Sources */,
+				C791BE83186F4243005453E6 /* MGPCommandBusSpec.m in Sources */,
 				C7101D29186F7129006AC00B /* MGPCommandSpec.m in Sources */,
 				C73DA4C7186F8A3D00F731C7 /* MGPCommandBusHandlersSpec.m in Sources */,
 				C73DA4EF1870ACA500F731C7 /* TestHelpers.m in Sources */,
@@ -541,6 +859,31 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C78B5B18192916C700949D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7C681321883B6D3006D4711 /* MGPCommandBus */;
+			targetProxy = C78B5B17192916C700949D74 /* PBXContainerItemProxy */;
+		};
+		C78B5B4A19291AE300949D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Specta-OSX";
+			targetProxy = C78B5B4919291AE300949D74 /* PBXContainerItemProxy */;
+		};
+		C78B5B4C19291AE300949D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Expecta;
+			targetProxy = C78B5B4B19291AE300949D74 /* PBXContainerItemProxy */;
+		};
+		C78B5B4E19291AEC00949D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Specta-iOS";
+			targetProxy = C78B5B4D19291AEC00949D74 /* PBXContainerItemProxy */;
+		};
+		C78B5B5019291AEC00949D74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Expecta-iOS";
+			targetProxy = C78B5B4F19291AEC00949D74 /* PBXContainerItemProxy */;
+		};
 		C7F5451F18666F42000A7BB5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C7F5450C18666F42000A7BB5 /* MGPCommandBus-iOS */;
@@ -572,7 +915,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 			};
 			name = Debug;
 		};
@@ -582,6 +925,174 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 			};
 			name = Release;
+		};
+		C78B5B1A192916C700949D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Support/MGPCommandBusTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tests/Vendor/Specta/src",
+					"$(SRCROOT)/Tests/Vendor/Expecta/src/**",
+				);
+				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C78B5B1B192916C700949D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Support/MGPCommandBusTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tests/Vendor/Specta/src",
+					"$(SRCROOT)/Tests/Vendor/Expecta/src/**",
+				);
+				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		C78B5B1C192916C700949D74 /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Support/MGPCommandBusTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tests/Vendor/Specta/src",
+					"$(SRCROOT)/Tests/Vendor/Expecta/src/**",
+				);
+				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-all_load",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Beta;
 		};
 		C7C681561883B6D3006D4711 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -602,6 +1113,7 @@
 				COPY_PHASE_STRIP = NO;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -621,10 +1133,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Library/Support/MGPCommandBus-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MGPCommandBus;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -650,6 +1164,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)";
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -662,18 +1177,166 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Library/Support/MGPCommandBus-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MGPCommandBus;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
+		};
+		C7DC4BB419228916007881EC /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "$(inherited)";
+			};
+			name = Beta;
+		};
+		C7DC4BB519228916007881EC /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/MGPCommandBus.dst;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Library/Support/MGPCommandBus-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "MGPCommandBus-iOS";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Beta;
+		};
+		C7DC4BB619228916007881EC /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MGPCommandBus.framework/Versions/A/MGPCommandBus";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Support/MGPCommandBusTests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(SRCROOT)/Tests/Vendor/Specta",
+					"$(SRCROOT)/Tests/Vendor/Expecta/**",
+					"$(SRCROOT)/Vendor/PandaKit",
+				);
+				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/Tests/Vendor/Expecta",
+					"$(SRCROOT)/Tests/Vendor/Specta",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "MGPCommandBusTests-iOS";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Beta;
+		};
+		C7DC4BB719228916007881EC /* Beta */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SDKROOT)";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Library/Support/MGPCommandBus-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Library/Support/MGPCommandBus-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = MGPCommandBus;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Beta;
 		};
 		C7F5452A18666F42000A7BB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -687,7 +1350,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/IKBCommandBus.dst;
+				DSTROOT = /tmp/MGPCommandBus.dst;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -704,8 +1367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "MGPCommandBus-iOS";
 				SDKROOT = iphoneos;
@@ -718,7 +1380,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -732,7 +1393,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/IKBCommandBus.dst;
+				DSTROOT = /tmp/MGPCommandBus.dst;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -743,8 +1404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "MGPCommandBus-iOS";
 				SDKROOT = iphoneos;
@@ -758,7 +1418,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MGPCommandBus.framework/Versions/A/MGPCommandBus";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -781,7 +1440,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Library/Support/MGPCommandBus-Prefix.pch";
+				GCC_PREFIX_HEADER = "Tests/Support/MGPCommandBusTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -797,7 +1456,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(SRCROOT)/Tests/Vendor/Specta",
-					"$(SRCROOT)/Tests/Vendor/Expecta",
+					"$(SRCROOT)/Tests/Vendor/Expecta/**",
 					"$(SRCROOT)/Vendor/PandaKit",
 				);
 				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
@@ -808,7 +1467,10 @@
 					"$(SRCROOT)/Tests/Vendor/Specta",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "MGPCommandBusTests-iOS";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -820,7 +1482,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MGPCommandBus.framework/Versions/A/MGPCommandBus";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -842,7 +1503,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/Library/Support/MGPCommandBus-Prefix.pch";
+				GCC_PREFIX_HEADER = "Tests/Support/MGPCommandBusTests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -853,7 +1514,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(SRCROOT)/Tests/Vendor/Specta",
-					"$(SRCROOT)/Tests/Vendor/Expecta",
+					"$(SRCROOT)/Tests/Vendor/Expecta/**",
 					"$(SRCROOT)/Vendor/PandaKit",
 				);
 				INFOPLIST_FILE = "Tests/Support/MGPCommandBusTests-Info.plist";
@@ -864,7 +1525,10 @@
 					"$(SRCROOT)/Tests/Vendor/Specta",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "MGPCommandBusTests-iOS";
 				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -881,6 +1545,17 @@
 			buildConfigurations = (
 				C75F131B17C58555008B622B /* Debug */,
 				C75F131C17C58555008B622B /* Release */,
+				C7DC4BB419228916007881EC /* Beta */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C78B5B19192916C700949D74 /* Build configuration list for PBXNativeTarget "MGPCommandBus Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C78B5B1A192916C700949D74 /* Debug */,
+				C78B5B1B192916C700949D74 /* Release */,
+				C78B5B1C192916C700949D74 /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -890,6 +1565,7 @@
 			buildConfigurations = (
 				C7C681561883B6D3006D4711 /* Debug */,
 				C7C681571883B6D3006D4711 /* Release */,
+				C7DC4BB719228916007881EC /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -899,6 +1575,7 @@
 			buildConfigurations = (
 				C7F5452A18666F42000A7BB5 /* Debug */,
 				C7F5452B18666F42000A7BB5 /* Release */,
+				C7DC4BB519228916007881EC /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -908,6 +1585,7 @@
 			buildConfigurations = (
 				C7F5452D18666F42000A7BB5 /* Debug */,
 				C7F5452E18666F42000A7BB5 /* Release */,
+				C7DC4BB619228916007881EC /* Beta */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

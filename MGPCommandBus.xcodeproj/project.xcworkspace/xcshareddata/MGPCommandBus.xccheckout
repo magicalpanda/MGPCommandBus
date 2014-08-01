@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F0F88C3-52F9-4DD6-9BE1-4C9DDB030833</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MGPCommandBus</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>048BEDEC-1781-4948-9535-9C029EA2127E</key>
+		<string>ssh://codeplane.com/magicalpanda/MGPCommandBus.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MGPCommandBus.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>048BEDEC-1781-4948-9535-9C029EA2127E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://codeplane.com/magicalpanda/MGPCommandBus.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>048BEDEC-1781-4948-9535-9C029EA2127E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>048BEDEC-1781-4948-9535-9C029EA2127E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MGPCommandBus</string>
+		</dict>
+	</array>
+</dict>
+</plist>
